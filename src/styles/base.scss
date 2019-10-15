@@ -1,0 +1,58 @@
+@import './font.scss';
+@import './layout.scss';
+@import './margin.scss';
+@import './padding.scss';
+@import './background.scss';
+@import './border.scss';
+@import './color.scss';
+@import './radius.scss';
+
+/* 行高 */
+.line-height1{
+    line-height:1;
+}
+.line-height1-5{
+    line-height:1.5;
+}
+
+/* 导入 */
+.importTabs-rao{
+    .el-tabs__item{
+        line-height:32px;
+        height:32px;
+    }
+}
+.importTabs-rao > .el-tabs__header{
+    display: inline-block;
+}
+/* 关联按钮 */
+.menu-quickly {
+  border: 1px solid #E8E8E8;
+  border-radius: 4px;
+  display: inline-block;
+  .iconfont{
+    padding-right: 5px;
+  }
+  a {
+    padding: 15px;
+    font-size: 14px;
+    text-underline: none;
+    display: block;
+
+    img {
+      padding-right: 8px;
+      vertical-align: -4px;
+    }
+  }
+  a.current {
+    background: #93BF88;
+    text-underline: none;
+    color: #fff
+  }
+
+  a:hover {
+    text-decoration: none;
+    background: #93BF88;
+    color: #fff
+  }
+}

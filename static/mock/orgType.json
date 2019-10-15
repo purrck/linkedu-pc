@@ -1,0 +1,30 @@
+{
+    "message": "success",
+    "resultCode": "000000",
+    "data": [
+        {
+            "codeId": "province",
+            "codeDesc": "省",
+            "imagePath": "/lookupCode/open.gif",
+            "fontColor": "red"
+        },
+        {
+            "codeId": "city",
+            "codeDesc": "市",
+            "imagePath": "/lookupCode/news.gif",
+            "fontColor": "green"
+        },
+        {
+            "codeId": "district",
+            "codeDesc": "区",
+            "imagePath": "/lookupCode/deleted.gif",
+            "fontColor": "blue"
+        },
+        {
+            "codeId": "school",
+            "codeDesc": "校",
+            "imagePath": "/lookupCode/edited.gif",
+            "fontColor": "black"
+        }
+    ]
+}

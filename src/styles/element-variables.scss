@@ -1,0 +1,96 @@
+/*!
+ *    Copyright (c) 2018-2025, lengleng All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ * Neither the name of the pig4cloud.com developer nor the names of its
+ * contributors may be used to endorse or promote products derived from
+ * this software without specific prior written permission.
+ * Author: lengleng (wangiegie@gmail.com)
+ */
+
+.el-dropdown-menu__item {
+  font-size: 12px;
+  line-height: 28px;
+}
+
+.el-menu--horizontal {
+  border-bottom: none !important;
+}
+
+.el-menu {
+  border-right: 0 !important;
+}
+
+.el-menu--display,
+.el-menu--display+.el-submenu__icon-arrow {
+  display: none;
+}
+.el-form--inline .el-form-item {
+  margin-right: 15px !important;
+}
+$--color-primary: red;
+.el-table--border, .el-table--group {
+  border-top: 1px solid #e8e8e8!important;
+  border-left: 1px solid #e8e8e8!important;
+  border-bottom: none!important;
+  border-right: none!important;
+}
+.el-button--small, .is-round {
+  padding: 8px 25px;
+}
+.el-button--small-icon, .el-button--small.is-round {
+  padding: 8px 14px;
+}
+.el-radio-group {
+  .el-radio__inner{
+    border-radius: 2px;
+  }
+
+  .el-radio__input.is-checked .el-radio__inner {
+    background: #93BF88;
+    color: #fff;
+    border-color: #93BF88;
+  }
+
+  .el-radio__input.is-checked + .el-radio__label {
+    color: #93BF88;
+  }
+
+  .el-radio__input.is-focus .el-radio__inner {
+    border-color: #93BF88;
+  }
+}
+.el-table__fixed-right {
+  .cell {
+    .el-popover__reference{
+      padding: 0 5px;
+    }
+  }
+}
+.checkFloors .el-pagination .btn-prev,.checkFloors .el-pagination .btn-next{
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  color:#93BF88;
+  padding: 0;
+}
+.checkFloors .el-pagination .el-pager{
+  font-size:14px;
+  font-family:MicrosoftYaHei;
+  color:rgba(112,112,112,1);
+}
+.checkFloors .el-pagination .number:after{
+  content: "F";
+}
+.checkFloors .el-pagination .el-pager li{
+min-width: 25px;
+}
+//.el-pagination__total {
+//  color: #93BF88;
+//}

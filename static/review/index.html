@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Great Hope 校园安全管理系统</title>
+  <script type="text/javascript" src="/static/review/jquery.min.js"></script>
+  <link rel="stylesheet" href="./quill.css">
+</head>
+<body>
+<div id="wrapper" class="iframe ql-editor"></div>
+<script>
+  //获取url中的参数
+  function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return decodeURI(r[2]);
+    return null; //返回参数值
+  }
+
+  var storage = window.localStorage;
+
+  $("#wrapper").html(storage.getItem("reviewContent"))
+  console.log(storage.getItem("reviewContent"))
+  console.log(window.location.href)
+
+</script>
+</body>
+</html>
+<style>
+  .iframe {
+    overflow: hidden;
+    font-size: 13px;
+  }
+  img {
+    width: 100%;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+</style>
+

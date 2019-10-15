@@ -1,0 +1,29 @@
+{
+    "message": "success", 
+    "resultCode": "000000", 
+    "data": {
+        "studentId": "33c58026a8064574bb4c14f47fda52fe", 
+        "userId": "39f15e23af9c407eaa738069fc2457f6", 
+        "studentNum": "7", 
+        "studentNationalSetNum": "A7", 
+        "userName": "张甲77", 
+        "userNameEn": "sdfsdf", 
+        "userNamePinyin": "dfdfsd", 
+        "gender": "F", 
+        "birthDt": "2019-01-25 00:00", 
+        "birthArea": "567567", 
+        "personNationCode": "Mongol MG", 
+        "personNationCodeStr": "蒙古族;null;null", 
+        "idCardTypeCode": "PASSPORT", 
+        "idCardTypeCodeStr": "护照;null;null", 
+        "idCardValidDt": "2019-01-26 00:00", 
+        "imagePath": "", 
+        "schoolId": "580df6d6c0a802137a30f614fcb1d90d", 
+        "schoolName": "硕希望实验小学", 
+        "classId": "c585ee3ec0a8023724e130badf4c91b1", 
+        "className": "一年五班", 
+        "contactPhoneNum": "15007534578", 
+        "telPhoneNum": "15007534578", 
+        "contactEmail": "raowen5555@gmail.com"
+    }
+}

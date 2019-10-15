@@ -1,0 +1,65 @@
+
+import axios from '@/axios/axios';
+import { baseUrl, khglUrl, dicUrl } from '@/config/env';
+// const baseUrl = '/yHF'
+const  routePath = 'base';
+const  modelName = 'schoolSegment';
+const  applicationCilent = '';
+
+export default {
+	//批量新增学段
+	addLotSegment(data){
+		return axios({
+			url: `${baseUrl}/base/schoolSegmentAd/addBatch`,
+			method: 'post',
+			data : data
+		})
+	},
+	getSegment(){
+		return axios({
+			url: `${baseUrl}/base/basicSchoolOrgAd/schoolOrgNoraml`,
+			method: 'get'
+		})
+	},
+	// 获取列表
+	fetchList(params) {
+		return axios({
+			url: baseUrl + `/${routePath}/${modelName}Ad/page`,
+			//url : `/static/mock/schoolSegment/list.json`,
+            method: 'get',
+            params: params
+        })
+	},
+	// 删除列表数据
+	batchDelObj(params) {
+		return axios({
+            url: baseUrl + `/${routePath}/${modelName}Ad`,
+            method: 'delete',
+            data: params
+        })
+	},
+	// 增加列表
+	addObj(params) {
+		return axios({
+                url: baseUrl + `/${routePath}/${modelName}Ad/add`,
+                method: 'post',
+                data: params
+            })
+	},
+	// 查看详情
+	getObj(id) {
+		return axios({
+			url: baseUrl + `/${routePath}/${modelName}Ad/${id}`,
+			//url : `/static/mock/segment/edit.json`,
+            method: 'get',
+        })
+	},
+	// 修改详情
+	putObj(params) {
+		return axios({
+            url: baseUrl + `/${routePath}/${modelName}Ad/edit`,
+            method: 'put',
+            data: params,
+        })
+	},
+}

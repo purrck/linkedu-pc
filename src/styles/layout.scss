@@ -1,0 +1,91 @@
+.relative{
+    position: relative
+}
+.absolute{
+    position: absolute
+}
+.top-0{
+    top:0;
+}
+.top-5{
+    top:5px;
+}
+
+.right-0{
+    right:0;
+}
+.right5{
+    right:5px;
+}
+.right10{
+    right:10px;
+}
+
+.p100{
+    width:100%;
+  /*padding-bottom: 20px;*/  //不要加在这里
+}
+.p80{
+    width:80%;
+}
+.p70{
+    width:70%;
+}
+.p60{
+    width:60%;
+}
+.p50{
+    width:50%;
+}
+.p25 {
+    width: 25%;
+}
+.p40{
+    width:40%;
+}
+.p30{
+    width:30%;
+}
+.p20{
+    width:20%;
+}
+.p10{
+    width:10%;
+}
+.p33 {
+  width: 33.33%;
+}
+.inline-block {
+  display: inline-block;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex1{
+    display:flex;
+}
+/* 换行 */
+.flex-wrap-wrap{
+    flex-wrap:wrap;
+}
+.space-between{
+    justify-content:space-between
+}
+/* 垂直底部对齐 */
+.align-items-flex-end{
+    display:flex;
+    align-items: flex-end;
+}
+/* 垂直居中 */
+.align-items-center{
+    align-items: center;
+}
+/* 垂直两端对齐 */
+.flex-direction{
+    flex-direction: column;
+}
+/* 水平居中 */
+.justify-content-center{
+    justify-content:center;
+}

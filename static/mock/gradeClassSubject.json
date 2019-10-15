@@ -1,0 +1,430 @@
+{
+    "message": "success",
+    "resultCode": "000000",
+    "data": {
+        "id": "580df6d6c0a802137a30f614fcb1d90d",
+        "name": "硕希望实验小学",
+        "children": [
+            {
+                "id": "1",
+                "name": "小学",
+                "children": [
+                    {
+                        "id": "1",
+                        "name": "一年级",
+                        "children": [
+                            {
+                                "id": "c5851d93c0a8023724e130ba25fd37b7",
+                                "name": "一年一班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585852ac0a8023724e130ba75a15d31",
+                                "name": "一年二班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585a315c0a8023724e130bab59cc4c6",
+                                "name": "一年三班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585d2f4c0a8023724e130ba8eaf1707",
+                                "name": "一年四班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585ee3ec0a8023724e130badf4c91b1",
+                                "name": "一年五班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1",
+                        "name": "一年级",
+                        "children": [
+                            {
+                                "id": "c5851d93c0a8023724e130ba25fd37b7",
+                                "name": "一年一班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585852ac0a8023724e130ba75a15d31",
+                                "name": "一年二班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585a315c0a8023724e130bab59cc4c6",
+                                "name": "一年三班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585d2f4c0a8023724e130ba8eaf1707",
+                                "name": "一年四班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585ee3ec0a8023724e130badf4c91b1",
+                                "name": "一年五班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "1",
+                "name": "小学",
+                "children": [
+                    {
+                        "id": "1",
+                        "name": "一年级",
+                        "children": [
+                            {
+                                "id": "c5851d93c0a8023724e130ba25fd37b7",
+                                "name": "一年一班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585852ac0a8023724e130ba75a15d31",
+                                "name": "一年二班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585a315c0a8023724e130bab59cc4c6",
+                                "name": "一年三班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585d2f4c0a8023724e130ba8eaf1707",
+                                "name": "一年四班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "c585ee3ec0a8023724e130badf4c91b1",
+                                "name": "一年五班",
+                                "children": [
+                                    {
+                                        "id": "201",
+                                        "name": "语文",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "211",
+                                        "name": "体育",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "212",
+                                        "name": "美术",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "213",
+                                        "name": "音乐",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

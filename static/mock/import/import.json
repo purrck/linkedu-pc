@@ -1,0 +1,78 @@
+{
+    "message": "success", 
+    "resultCode": "000000", 
+    "data": {
+        "successCount": 1,
+        "successData" : [
+            {
+                "studentNum": "1", 
+                "studentNationalSetNum": "A1", 
+                "userName": "张甲1", 
+                "classNum": "2016010105", 
+                "gender": "男"
+            }
+        ],
+        "successDownloadUrl": "/user/studentAd/export?cacheId=f84a983063f36636e84f1b3e88a6fef1",
+        "failCount": 7, 
+        "failData": [
+            
+            {
+                "studentNum": "1", 
+                "studentNationalSetNum": "A1", 
+                "userName": "张甲1", 
+                "classNum": "2016010105", 
+                "gender": "男", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "2", 
+                "studentNationalSetNum": "A2", 
+                "userName": "张甲2", 
+                "classNum": "2016010105", 
+                "gender": "男", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "3", 
+                "studentNationalSetNum": "A3", 
+                "userName": "张甲3", 
+                "classNum": "2016010105", 
+                "gender": "男", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "4", 
+                "studentNationalSetNum": "A4", 
+                "userName": "张甲4", 
+                "classNum": "2016010105", 
+                "gender": "男", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "5", 
+                "studentNationalSetNum": "A5", 
+                "userName": "张甲5", 
+                "classNum": "2016010105", 
+                "gender": "女", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "6", 
+                "studentNationalSetNum": "A6", 
+                "userName": "张甲6", 
+                "classNum": "2016010105", 
+                "gender": "女", 
+                "remark": "该学生已录入系统"
+            }, 
+            {
+                "studentNum": "7", 
+                "studentNationalSetNum": "A7", 
+                "userName": "张甲7", 
+                "classNum": "2016010105", 
+                "gender": "女", 
+                "remark": "该学生已录入系统"
+            }
+        ], 
+        "failDownloadUrl": "/user/studentAd/export?cacheId=f84a983063f36636e84f1b3e88a6fef1"
+    }
+}
