@@ -344,7 +344,7 @@ export default {
       this.searchPoint()
     },
     enterPoint () {
-      console.log(1)
+      // console.log(1)
       // this.formData.point = this.uniqueFn([...this.formData.point, ...this.multipleSelection], 'securityPlaceId')
       this.formData.point = this.formData.point.concat(...this.multipleSelection)
       this.dialogVisible = false

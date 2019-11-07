@@ -254,7 +254,7 @@
         let query = this.$route.query;
         for (let item in query) {
           this.formData[item] = query[item]
-          console.log(this.formData[item])
+          // console.log(this.formData[item])
 
         }
       }

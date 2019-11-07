@@ -1081,7 +1081,7 @@ import { mapGetters,mapMutations } from 'vuex';
         }
       this.SET_IS_LOADING(false);
       this.getDetail(this.$route.params.id);
-      console.log(this.schoolInfo)
+      // console.log(this.schoolInfo)
       this.formData.schoolId = this.schoolInfo.schoolOrgId;
       this.formData.schoolName = this.schoolInfo.schoolOrgName;
       if(this.pageState != "detail"){
@@ -1205,7 +1205,7 @@ import { mapGetters,mapMutations } from 'vuex';
       treeCall(event){
         this.gradeId = event.grade.id;
         //this.formData.gradeName = event.grade.name;
-        console.log(event)
+        // console.log(event)
         this.formData.classId = event.class.id;
         this.formData.className = event.class.name;
 
@@ -1235,7 +1235,7 @@ import { mapGetters,mapMutations } from 'vuex';
         this.isLoaded = true;
 
         set[formName].validate(valid => {
-          console.log(this.formData)
+          // console.log(this.formData)
           if (this.pageState === "edit" && valid) {
         this.formLoading = true;
             api.putObj(this.formData).then(res => {

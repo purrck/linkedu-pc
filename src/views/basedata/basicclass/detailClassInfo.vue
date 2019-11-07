@@ -810,7 +810,7 @@
           for (let i=0;i<this.palceTableData.length;i++){
             this.palceTableDataList.push({placeName:this.palceTableData[i].placeName,placeId:this.palceTableData[i].placeId}  );
           }
-          console.log(this.palceTableData)
+          // console.log(this.palceTableData)
           if (res.data.resultCode !== "000000") {
             this.$message.error(res.data.message);
           }
@@ -834,7 +834,7 @@
           b = "http://47.106.35.119:5388"
         }
         let opath = b+'/#/'+ path + '?classId=' + id+'&token=Bearer '+ getToken() + '&userId=' + userId;
-        console.log(opath);
+        // console.log(opath);
         window.open(opath,'_blank');
       },
       pickTime1() {
@@ -923,7 +923,7 @@
         })
       },
       yearChange(event, item) {
-        console.log(event)
+        // console.log(event)
         if (!item.gradeId) {
           this.$message.error("请您先选择年级!");
           return;
@@ -938,7 +938,7 @@
             return item2.segmentId == item.segmentId
           })
           res.data.data.records.forEach(item => {
-            console.log(item.classNum)
+            // console.log(item.classNum)
           })
           let _b = () => {
             let _a = res.data.data.records.some(item1 => {
@@ -1087,7 +1087,7 @@
                 this.skyData.lotClassList[0][key] = res.data.data[key]
               }
 
-              console.log(this.skyData)
+              // console.log(this.skyData)
               this.formData.schoolId = this.schoolInfo.schoolOrgId
               this.formData.schoolName = this.schoolInfo.schoolOrgName
 
@@ -1131,7 +1131,7 @@
               return item2.segmentId == item.segmentId
             })
             res.data.data.records.forEach(item => {
-              console.log(item.classNum)
+              // console.log(item.classNum)
             })
             let _b = () => {
               let _a = res.data.data.records.some(item1 => {
@@ -1182,12 +1182,12 @@
           b = "http://47.106.35.119:5388"
         }
         let opath = `${b}/#/WebTologin?token=${getToken()}&userId=${userId}&username=${username}&classId=${classId}`
-        console.log(opath);
+        // console.log(opath);
         window.open(opath,'_blank');
       },
       getSchoolTree() {
         commonApi.getSegmentGrade().then((res) => {
-          console.log(res.data.data.children[0].children)
+          // console.log(res.data.data.children[0].children)
           if (res.data.resultCode === '000000' ) {
             res.data.data.children.map((item, index) => {
               item['pid'] = `${index}`;

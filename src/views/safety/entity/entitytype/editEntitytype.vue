@@ -425,10 +425,10 @@
     methods: {
       //图片上传
       uploadData(res) {
-        console.log(3)
-        console.log(res)
+        // console.log(3)
+        // console.log(res)
         this.formData.imagePath = res;
-        console.log(this.formData.imagePath)
+        // console.log(this.formData.imagePath)
       },
       //编辑器
       getEditorValue(val) {

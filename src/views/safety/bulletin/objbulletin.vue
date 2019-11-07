@@ -292,7 +292,7 @@
         })
       },
       handleCheckLingDaoChange(event) {
-        console.log(event)
+        // console.log(event)
         this.checkedLingDao = event ? this.userBelongedTOList.map(item => {
           return item.departId
         }) : [];
@@ -331,7 +331,7 @@
         } else {
           this.classVal[`a${index}`] = [];
         }
-        console.log(this.classVal[`a${index}`])
+        // console.log(this.classVal[`a${index}`])
         this.selectedItem(this.classVal[`a${index}`])
 
       },
@@ -382,7 +382,7 @@
         })
       },
       handleCheckedTongZhiChange(event) {
-        console.log(event)
+        // console.log(event)
       },
       handlerClass(index) {
         this.classListNum = this.classList[index].children
@@ -393,7 +393,7 @@
         if (event.name == 'A') {
           bulletinUserRuleAdDepInfoBySchoolId().then(data => {
             this.userBelongedTOList = data.data.data
-            console.log(data)
+            // console.log(data)
           })
         }
         if (event.name == 'B' || event.name == 'D' || event.name == 'C') {
@@ -407,10 +407,10 @@
               this.$set(this.classVal, `selectedList${i}`, [])
             }
             this.classListNum = this.classList[0].children
-            console.log(data.data.data.children)
+            // console.log(data.data.data.children)
           })
         }
-        console.log(event)
+        // console.log(event)
       },
       getUserType() {
         commonApi.getCodeIntType('userType').then(item => {
@@ -440,7 +440,7 @@
       handleSelectionChange(val) {
         this.multipleSelection = val;
 
-        console.log(val);
+        // console.log(val);
       },
       handleDelete(id) {
 

@@ -711,9 +711,9 @@
   chapterVisible() {
         if (this.chapterVisible === false){
           this.closeWebSocket()
-          console.log('断开连接')
+          // console.log('断开连接')
           clearInterval(this.isbeginSetInterval)
-          console.log('已清除定时器')
+          // console.log('已清除定时器')
             this.getInAll=[];
             this.getInStudents=[];
             this.getInStrangers=[];
@@ -743,7 +743,7 @@
     },
     // activated() {
     //   //只刷新数据，不改变整体的缓存
-    //   console.log('重新活跃路由');
+    //   // console.log('重新活跃路由');
     //   let query = this.$route.query;
     //   for (let item in query) {
     //     this.params[item] = query[item]
@@ -783,12 +783,12 @@
     },
     methods: {
       isSchoolStdent(){
-        // console.log(this.newData);
+        // // console.log(this.newData);
         // for (let i=0;i<this.newData.inCheck.length;i++){
-        //   console.log(this.newData.inCheck[i].studentId)
+        //   // console.log(this.newData.inCheck[i].studentId)
         //   let studentId = this.newData.inCheck[i].studentId
         //     api.isSchoolStdent(studentId).then(res => {
-        //       console.log(res)
+        //       // console.log(res)
         //     }, res => {
         //       this.$message.error(res.message);
         //     });
@@ -797,7 +797,7 @@
         // for (let i=0;i<this.newData.outCheck.length;i++){
         //   let studentId = this.newData.outCheck[i].studentId
         //   api.isSchoolStdent(studentId).then(res => {
-        //     console.log(res)
+        //     // console.log(res)
         //   }, res => {
         //     this.$message.error(res.message);
         //   });
@@ -806,7 +806,7 @@
       },
       //宿舍过滤（是否是本宿舍的学生）
       filterDormitoryData(){
-        console.log('宿舍过滤1')
+        // console.log('宿舍过滤1')
 
         if(this.newData.inCheck.length>0) {
           for (let i=0;i<this.newData.inCheck.length;i++) {
@@ -841,7 +841,7 @@
 
 
 
-        console.log('大门过滤1')
+        // console.log('大门过滤1')
         if(this.newData.inCheck.length>0) {
           for (let i=0;i<this.newData.inCheck.length;i++) {
             let isStranger = true  //默认是陌生人
@@ -888,27 +888,27 @@
         this.websock.onclose = this.websocketclose;
       },
       websocketonopen(){ //连接建立之后执行send方法发送数据
-        console.log('已连接')
+        // console.log('已连接')
       },
       websocketonerror(){//连接建立失败重连
-        console.log('已断开连接')
+        // console.log('已断开连接')
         if (this.connectionNum<4){   //只会重连3次
           this.connectionNum++
           this.initWebSocket();
         }else{
           alert('监控已断开，请刷新后再连接')
-          console.log('已重连了3次，请刷新再连接')
+          // console.log('已重连了3次，请刷新再连接')
         }
       },
       websocketonmessage(e){ //数据接收
         this.forChangeArray = this.newData = JSON.parse(e.data);
-        console.log(this.newData)
+        // console.log(this.newData)
       },
       websocketsend(Data){//数据发送
         // this.websock.send(Data);
       },
       websocketclose(e){  //关闭
-        console.log('断开连接',e);
+        // console.log('断开连接',e);
       },
       closeWebSocket(){
         this.websock.close()
@@ -953,7 +953,7 @@
           this.insiteVisitor.visitorName = val.studentName
         }
         this.$forceUpdate()   //手动渲染数据，
-        console.log(this.insiteVisitor)
+        // console.log(this.insiteVisitor)
       },
       //放行
       through(data, index, num) {
@@ -1075,10 +1075,10 @@
 
       //打开监控
       openMonitor(val) {
-        console.log(val)
+        // console.log(val)
         this.shoosePlaceTypeCode = this.insiteVisitor.placeTypeCode = val.placeTypeCode   //场所类型
         this.insiteVisitor.placeName = val.placeName   //场所
-        console.log(this.insiteVisitor)
+        // console.log(this.insiteVisitor)
         this.chapterVisible = true
         //提供参数给添加访问
         // this.getWatch.dormitoryId = this.insiteVisitor.dormitoryId = this.studentsLeaveNumForm.dormitoryId = val.dormitoryId  //给监控提供参数 and 来访  and 学生请假
@@ -1089,14 +1089,14 @@
         if (val.placeTypeCode !== 'B'){   //不是宿舍
           this.initWebSocket()//
           this.dormitoryName = val.placeName  //显示校门
-          console.log('校门')
+          // console.log('校门')
           this.onleGate = false  //去除宿舍的数据
         }else if(val.placeTypeCode==='B'){  //宿舍
           this.dormitoryName = val.placeName  //显示宿舍
           this.once = true
           this.onleGate = true
           this.getDormitoryId(val)
-          console.log('宿舍')
+          // console.log('宿舍')
         }
         // this.searchStudentForm.dormitoryId = this.insiteVisitor.dormitoryId = this.outsiteVisitor.dormitoryId = val.dormitoryId  //去获取学生  和学生来访
         // this.insiteVisitor.placeId = this.outsiteVisitor.placeId = val.placeId
@@ -1106,7 +1106,7 @@
       },
       //获取宿舍
       getDormitoryId(val){
-        console.log(val)
+        // console.log(val)
         let getDormitoryIdForm = {}
         getDormitoryIdForm.page = 1
         getDormitoryIdForm.limit = 9999
@@ -1115,7 +1115,7 @@
         api.getDormitoryId(getDormitoryIdForm).then(res => {
           if (res.data.resultCode === "000000") {
             this.getDormitoryIdList = res.data.data.records;
-            console.log(this.getDormitoryIdList)
+            // console.log(this.getDormitoryIdList)
             this.getStudentsLeaveNum(this.getDormitoryIdList[0]) //获取学生请假人数
             this.beginSetInterval(this.getDormitoryIdList[0]) //开启定时器去获取请假人数
             this.getAllStudents(this.getDormitoryIdList[0])  //获取宿舍居住学生人数（包含开启监控）
@@ -1131,7 +1131,7 @@
         if (this.shoosePlaceTypeCode !== 'B'){   //不是宿舍
 
         } else if (this.shoosePlaceTypeCode === 'B'){   //是宿舍
-          console.log('监控'+val.dormitoryName)
+          // console.log('监控'+val.dormitoryName)
           // this.dormitoryName = val.dormitoryName
           this.getWatch.placeId = this.insiteVisitor.placeId = val.placeId
           this.getWatch.schoolId =this.insiteVisitor.schoolId = val.schoolId
@@ -1147,10 +1147,10 @@
         },3600000)
       },
       showLeave(val){
-        console.log(val.dormitoryName)
+        // console.log(val.dormitoryName)
         let todaySix = Number(new Date(new Date(new Date().toLocaleDateString()).getTime()+6*60*60*1000-1)) ;  //获取今天6点的时间戳
         let todayNow = Number(new Date());  //获取现在的时间戳
-        // console.log(this.isToDay)
+        // // console.log(this.isToDay)
         if (this.isToDay !== todaySix){
           this.once = true
         }
@@ -1173,7 +1173,7 @@
         api.getStudentsLeaveNum(studentsLeaveNumForm).then(res => {
           if (res.data.resultCode === "000000") {
             this.studentsLeaveNum = res.data.data;
-            // console.log(this.studentsLeaveNum)
+            // // console.log(this.studentsLeaveNum)
           }
           this.isLoaded = false;
         }, res => {
@@ -1329,7 +1329,7 @@
                 this.$router.push({path: opath})
       },
       // toAddChildren() {
-      //   console.log(this.schoolId,this.schoolOrgName)
+      //   // console.log(this.schoolId,this.schoolOrgName)
       //   //safety safetyEdu basedata
       //   let opath = '/basedata/detailBasicSchoolPlace/add/' + this.schoolId+'?schoolOrgName='+this.schoolOrgName+'parentPlaceId='+this.$route.query.parentPlaceId;
       //   this.$router.push({path: opath})

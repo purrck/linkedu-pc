@@ -351,7 +351,7 @@ export default {
   },
   activated() {
     //只刷新数据，不改变整体的缓存
-    console.log('重新活跃路由');
+    // console.log('重新活跃路由');
     let query = this.$route.query;
     for (let item in query) {
       this.params[item] = query[item]
@@ -430,7 +430,7 @@ export default {
     },
     deleteRowHandleClose () {
       api.batchDelObj(this.multipleSelection).then(res => {
-        console.log(res)
+        // console.log(res)
         this.deleteVisible = false
         this.$message.success('删除成功')
         this.getList()
@@ -439,11 +439,11 @@ export default {
     },
     toTheRoute (type, id) {
       let path = `/safetyEdu/detailPublishArticleOp/${type}/${id}`
-      console.log(path)
+      // console.log(path)
       this.$router.push({path})
     },
     deleteRow (id) {
-      console.log(id)
+      // console.log(id)
       this.deleteVisible = true
       this.multipleSelection = [id]
     },
@@ -459,7 +459,7 @@ export default {
     },
     check (articleId) {
       api.commit({articleId}).then(res => {
-        console.log(res)
+        // console.log(res)
         this.toTheRoute('check', articleId)
       })
     },
@@ -470,7 +470,7 @@ export default {
       }).childrenColumns || []
     },
     deleteSelection () {
-      console.log(this.multipleSelection)
+      // console.log(this.multipleSelection)
       this.deleteVisible = true
     },
 

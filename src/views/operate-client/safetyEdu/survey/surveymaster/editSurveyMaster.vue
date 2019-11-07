@@ -233,7 +233,7 @@ export default {
     submit (formName, clickType) {
       const set = this.$refs
       this.isLoaded = true
-      console.log(this)
+      // console.log(this)
       this.formData.SurveyItemAdTOList.forEach(item => {
         item.surveyId = this.$route.params.id
         if (item.options && item.options.length) {
@@ -255,8 +255,8 @@ export default {
       })
       this.formData.SurveyMasterAd.surveyId = this.$route.params.id
       let obj = {vSurveyMasterAdTO: this.formData.SurveyMasterAd, vSurveyItemAdTOS: this.formData.SurveyItemAdTOList, clickType: clickType || 'save', scope: this.SendObjectData}
-      console.log(obj)
-      console.log(set[formName])
+      // console.log(obj)
+      // console.log(set[formName])
       // set[formName].validate(valid => {
       // obj.vSurveyMasterAdTO.qnChoiceContent = []
       // if (this.pageState === 'edit') {
@@ -294,7 +294,7 @@ export default {
       // this.submit(formName)
     },
     finish (val) {
-      console.log(val)
+      // console.log(val)
       let {header} = val
       let extendData = JSON.stringify(header)
       let province = []
@@ -338,7 +338,7 @@ export default {
             for (const child of headerElement.children) {
               for (const child1 of child.children) {
                 for (const checkedElement of child.checked) {
-                  console.log(child, child1, checkedElement)
+                  // console.log(child, child1, checkedElement)
                   if (child1.id === checkedElement) {
                     area.push(child1)
                   }
@@ -348,7 +348,7 @@ export default {
             break
         }
       }
-      console.log('province', province, 'city', city, 'area', area)
+      // console.log('province', province, 'city', city, 'area', area)
       if (area.length) {
         this.SendObjectData.areas = area
       } else if (city.length) {

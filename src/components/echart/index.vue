@@ -153,16 +153,14 @@ export default {
       }
     },
     async getResult (code) {
-      // console.log(this.date)
+      // // console.log(this.date)
       api.getResults(code, this.date).then(async res => {
 
         this.echartData = res.data.data
-        console.log('this.echartData')
-        console.log(this.echartData)
         //走字典翻译
         if (!this.isNotDictionary) {
           await common.getCodeIntType(this.typeCode).then(result => {
-            // console.log(this.echartData, result.data, code)
+            // // console.log(this.echartData, result.data, code)
             this.echartData = translateNameByResultKey(this.echartData, result.data.data)
           })
         } else {
@@ -176,7 +174,7 @@ export default {
             }
           })
         }
-        console.log('开始画图')
+        // console.log('开始画图')
         if (this.formData.charTypeCode === 'somePie') {
             var _a = {
               legend: {},
@@ -242,13 +240,6 @@ export default {
               })
           })
 
-          console.log(this.echartData)
-
-          // this.optionCircle.series[0].data = _a.series[0]
-          //this.optionCircle.series[0].data = resData
-          //this.optionCircle.title.text = `数据截止时间 : ${this.formData.performedDt}`
-          console.log(_a)
-          console.log(JSON.stringify(_a))
           this.drawLine(_a)
         }else if (this.formData.charTypeCode === 'pie') {
           let resData = toEcharsCircle(this.echartData)

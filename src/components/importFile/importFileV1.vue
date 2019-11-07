@@ -59,7 +59,6 @@
       }
     },
     created(){
-      console.log(this.$route.query.url)
     }
   }
 </script>

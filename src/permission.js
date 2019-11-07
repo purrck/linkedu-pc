@@ -41,15 +41,15 @@ function hasPermission(roles, permissionRoles) {
 const whiteList = ['/login', '/404', '/401','/installApp','/bootPage']
 
 router.beforeEach((to, from, next) => {
-  // console.log('看看返回了什么！22333')
+  // // console.log('看看返回了什么！22333')
   // 缓冲设置
-  console.log(to);
+  // console.log(to);
   if (store.state.tags.tagList.some(ele => {
     return ele.path === to.path
   })) {
     // console.error('看看')
-    // console.log(to.name.indexOf('List')===-1||to.name.indexOf('list')===-1)
-    // console.log(to.name.indexOf('list'))
+    // // console.log(to.name.indexOf('List')===-1||to.name.indexOf('list')===-1)
+    // // console.log(to.name.indexOf('list'))
     if(to.name.indexOf('List')!==-1||to.name.indexOf('list')!==-1&&to.path.indexOf('List')!==-1||to.path.indexOf('list')!==-1){
       to.meta.$keepAlive = true
     }else{
@@ -104,5 +104,5 @@ router.afterEach((to, from) => {
   if(to.path !== '/page/wel'&&to.path !== '/login'){
     store.commit('ADD_TAG',to)
   }
-  // console.log(to)
+  // // console.log(to)
  });

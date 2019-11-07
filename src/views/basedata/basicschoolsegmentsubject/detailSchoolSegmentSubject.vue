@@ -369,7 +369,7 @@ export default {
   },
   watch: {
     watcher(val) {
-      console.log(val);
+      // console.log(val);
     }
   },
   computed: {
@@ -406,7 +406,7 @@ export default {
       });
     },
     treeCall(event) {
-      console.log(event);
+      // console.log(event);
 
       this.formData.subjectId = event.subject.id;
       this.formData.segmentId = event.segment.id;
@@ -592,7 +592,7 @@ export default {
       });
     },
     gradeChange(event) {
-        console.log(event)
+        // console.log(event)
       if (event == "") {
         this.conf.gradeName = "";
         this.conf.gradeId = "";
@@ -613,7 +613,7 @@ export default {
       this.watcher = this.data;
     },
     subjectChange(event) {
-        console.log(event);
+        // console.log(event);
       if (event == "") {
         this.conf.subjectId = "";
         this.conf.subjectName = "";

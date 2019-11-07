@@ -188,7 +188,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -281,7 +281,7 @@
         this.getList();
       },
       copyLink(event) {
-        console.log(arguments[3].target.innerText);
+        // console.log(arguments[3].target.innerText);
         this.itemUrl = arguments[3].target.innerText;
         if (this.itemUrl.indexOf('/') !== -1) {
           this.$refs.copy.click()
@@ -346,7 +346,7 @@
         iframe.style.display = "none";
         iframe.href = row.filePath;
         iframe.download = 'download'
-        console.log(iframe);
+        // console.log(iframe);
         iframe.click()
       },
       //删除

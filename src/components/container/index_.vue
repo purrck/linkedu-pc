@@ -36,7 +36,7 @@
     </el-container>
     <!--main内容-->
     <!--footer-->
-    <bottom/>
+    <!-- <bottom/> -->
     <!--footer-->
   </div>
 </template>
@@ -45,7 +45,7 @@
   import {resolveUrlPath, findArrayByValue} from "@/util/util";
   import top from "./top/";
   import sidebar from "./sidebar/";
-  import bottom from "./bottom/";
+  // import bottom from "./bottom/";
   import {validatenull} from "@/util/validate";
   import {mapState, mapGetters} from "vuex";
 

@@ -463,7 +463,7 @@ export default {
         this.formData.gradeName = this.optionsList4.find(
           item => item.value === this.formData.gradeId
         ).label;
-        // console.log(this.formData);
+        // // console.log(this.formData);
         if (this.pageState === "edit" && valid) {
           this.formLoading = true;
           api.putObj(this.formData).then(res => {

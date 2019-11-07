@@ -484,7 +484,7 @@ export default [
             path: '/safety/listSchoolProdReservedSample',
             component: 'Layout',
             children: []
-          },{
+          }, {
             label: '食品检验',
             path: '/safety/listSchoolProdTest',
             component: 'Layout',
@@ -559,8 +559,27 @@ export default [
         component: 'Layout',
         children: []
       },
-    ],
+      {
+        label: '宿舍管理和来访',
+        path: '/dormitory/listBasicSchoolDormitory',
+        children: [
+          {
+            label: '学校宿舍',
+            path: '/dormitory/listBasicSchoolDormitory',
+            component: 'Layout',
+            children: [
 
+            ]
+          },
+          {
+            label: '学校来访记录',
+            path: '/dormitory/listSchoolVisitRecord',
+            component: 'Layout',
+            children: []
+          },
+        ]
+      },
+    ],
   },
 
   {
@@ -578,7 +597,7 @@ export default [
         path: '/homeSchLink/listClassCommitteeDuty',
         component: 'Layout',
         children: []
-      },  {
+      }, {
         label: '班级家委会',
         path: '/homeSchLink/listClassParentCommitteeMember',
         component: 'Layout',
@@ -629,172 +648,323 @@ export default [
       },
     ]
   },
-  {
-    label: '特长教育',
-    path: '/SpecialEducation',
-    component: 'Layout',
-    children: [
-      {
-        label: '兴趣班',
-        path: '/SpecialEducation/listInterestCourseClass',
-        component: 'Layout',
-        children: []
-      },
-      // {
-      //   label: '兴趣班学生',
-      //   path: '/SpecialEducation/listInterestCourseClassStudent',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '兴趣班学生考勤',
-      //   path: '/SpecialEducation/listInterestCourseClassStudentCheck',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '兴趣班学生计划',
-      //   path: '/SpecialEducation/listInterestCourseClassPlan',
-      //   component: 'Layout',
-      //   children: []
-      // },
-    ]
-  },
-  {
-    label: '宿舍管理和来访',
-    path: '/dormitory',
-    component: 'Layout',
-    children: [
-      {
-        label: '学校宿舍',
-        path: '/dormitory/listBasicSchoolDormitory',
-        component: 'Layout',
-        children: []
-      },
-      // {
-      //   label: '学校住宿房间',
-      //   path: '/dormitory/listBasicSchoolDormitoryRoom',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '宿舍管理老师',
-      //   path: '/dormitory/listBasicSchoolDormitoryTeacher',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '学生住宿',
-      //   path: '/dormitory/listBasicSchoolDormitoryStudent',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '宿舍出入学生记录',
-      //   name: '宿舍出入学生记录',
-      //   path: '/dormitory/listSchoolPlaceStudentCheck',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      // {
-      //   label: '宿舍出入学生记录',
-      //   path: '/dormitory/listSchoolPlaceStudentCheck',
-      //   component: 'Layout',
-      //   children: []
-      // },
-      {
-        label: '学校来访记录',
-        path: '/dormitory/listSchoolVisitRecord',
-        component: 'Layout',
-        children: []
-      },
+  // {
+  //   label: '特长教育',
+  //   path: '/SpecialEducation',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       label: '兴趣班',
+  //       path: '/SpecialEducation/listInterestCourseClass',
+  //       component: 'Layout',
+  //       children: []
+  //     },
+  // {
+  //   label: '兴趣班学生',
+  //   path: '/SpecialEducation/listInterestCourseClassStudent',
+  //   component: 'Layout',
+  //   children: []
+  // },
+  // {
+  //   label: '兴趣班学生考勤',
+  //   path: '/SpecialEducation/listInterestCourseClassStudentCheck',
+  //   component: 'Layout',
+  //   children: []
+  // },
+  // {
+  //   label: '兴趣班学生计划',
+  //   path: '/SpecialEducation/listInterestCourseClassPlan',
+  //   component: 'Layout',
+  //   children: []
+  // },
+  //   ]
+  // },
+  // {
+  //   label: '宿舍管理和来访',
+  //   path: '/dormitory',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       label: '学校宿舍',
+  //       path: '/dormitory/listBasicSchoolDormitory',
+  //       component: 'Layout',
+  //       children: [
 
-    ]
-  },
+  //       ]
+  //     },
+  //     {
+  //       label: '学校来访记录',
+  //       path: '/dormitory/listSchoolVisitRecord',
+  //       component: 'Layout',
+  //       children: []
+  //     },
+  //   ]
+  // },
   {
-    label: '新微应用',
-    path: '/securityReminder/listLostThing',
+    label: '微应用',
+    path: '/newApplications',
     component: 'Layout',
     children: [
+      {
+        label: '疾控中心',
+        path: '/newApplications/listSchoolEpidemicSituation',
+        children: [
+          {
+            label: '疫情记录',
+            path: '/newApplications/listSchoolEpidemicSituation',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情处理',
+            path: '/newApplications/listSchoolEpidemicSituationProcess',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情学生',
+            path: '/newApplications/listSchoolEpidemicSituationStudent',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情处理小组教师',
+            path: '/newApplications/listSchoolEpidemicSituationTeacher',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生疾病知识库',
+            path: '/newApplications/listSchoolIllnessLib',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生异常情况',
+            path: '/newApplications/listSchoolStudentBodyabnormal',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生疾病信息',
+            path: '/newApplications/listSchoolStudentIllness',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
+      {
+        label: '特长教育',
+        path: '/SpecialEducation/listInterestCourseClass',
+        children: [
+          {
+            label: '兴趣班',
+            path: '/SpecialEducation/listInterestCourseClass',
+            component: 'Layout',
+            children: []
+          },
+        ]
+      },
+      {
+        label: '学校',
+        path: '/newApplications/listSchoolDocIndex',
+        children: [
+          {
+            label: '学校文件',
+            path: '/newApplications/listSchoolDocIndex',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
+      {
+        label: '网络学习空间',
+        path: '/newApplications/listPersonalStudySpace',
+        children: [
+          {
+            label: '个人学习空间',
+            path: '/newApplications/listPersonalStudySpace',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '个人文章',
+            path: '/newApplications/listPersonalArticle',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
       {
         label: '失物招领',
-        path: '/securityReminder/listLostThing',
+        path: '/newApplications/listLostThing',
         component: 'Layout',
         children: []
       },
       {
-        label: '个人文章',
-        path: '/securityReminder/listPersonalArticle',
+        label: '校长信箱',
+        path: '/newApplications/listPrincipalMailbox',
         component: 'Layout',
         children: []
-      },// more
-      {
-        label: '个人文章推荐',
-        path: '/securityReminder/listPersonalArticleRecommend',
-        component: 'Layout',
-        children: []
-      },// more
+      },
       {
         label: '校内消息',
-        path: '/securityReminder/listSchoolMessage',
+        path: '/newApplications/listSchoolMessage',
         component: 'Layout',
         children: []
-      },// more
-      {
-        label: '校内消息学生',
-        path: '/securityReminder/listSchoolMessageUser',
-        component: 'Layout',
-        children: []
-      },// more
-      {
-        label: '安全提醒',
-        path: '/securityReminder/listSchoolSecurityMessage',
-        component: 'Layout',
-        children: []
-      },// more
-      {
-        label: '安全提醒学生',
-        path: '/securityReminder/listSchoolSecurityMessageUser',
-        component: 'Layout',
-        children: []
-      },// more
+      },
       {
         label: '校内任务',
-        path: '/securityReminder/listSchoolTask',
+        path: '/newApplications/listSchoolTask',
         component: 'Layout',
         children: []
-      },// more
-      {
-        label: '校内任务学生',
-        path: '/securityReminder/listSchoolTaskUser',
-        component: 'Layout',
-        children: []
-      },// more
-      {
-        label: '校内任务完成记录',
-        path: '/securityReminder/listSchoolTaskUserHis',
-        component: 'Layout',
-        children: []
-      },// more
-      {
-        label: '学生小组',
-        path: '/securityReminder/listStudentGroup',
-        component: 'Layout',
-        children: []
-      },// more
+      },
       {
         label: '学生小组设置',
-        path: '/securityReminder/listStudentGroupSet',
+        path: '/newApplications/listStudentGroupSet',
         component: 'Layout',
         children: []
-      },// more
+      },
       {
-        label: '学生小组成员',
-        path: '/securityReminder/listStudentGroupUser',
+        label: '报修信息',
+        path: '/newApplications/listRepairInfo',
         component: 'Layout',
         children: []
-      },// more
-      
+      }
+    ]
+  },
+  {
+    label: '教学综合管理',
+    path: '/safetyManagement',
+    component: 'Layout',
+    children: [
+      {
+        label: '新教师',
+        path: '/safetyManagement/listSchoolTeacherStudentComment',
+        children: [
+          {
+            label: '学生评语',
+            path: '/safetyManagement/listSchoolTeacherStudentComment',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师评估',
+            path: '/safetyManagement/listSchoolEvaluationTeacherClass',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师评估计划',
+            path: '/safetyManagement/listSchoolEvaluationTeacherPlan',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师奖项',
+            path: '/safetyManagement/listSchoolTeacherAward',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师学历',
+            path: '/safetyManagement/listSchoolTeacherEduhis',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师职称',
+            path: '/safetyManagement/listSchoolTeacherPositionalTitle',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师实习',
+            path: '/safetyManagement/listSchoolTeacherPractice',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师处分',
+            path: '/safetyManagement/listSchoolTeacherPunishment',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师工作考勤',
+            path: '/safetyManagement/listSchoolTeacherWorkCheck',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '教师证书',
+            path: '/safetyManagement/listSchoolTeacherCertificate',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
+      {
+        label: '值周值日',
+        path: '/safetyManagement/listSchoolBeonduty',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '教师上课考勤',
+        path: '/safetyManagement/listSchoolTeacherClassCheck',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '教师听课',
+        path: '/safetyManagement/listSchoolTeacherClassLook',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '教师代课',
+        path: '/safetyManagement/listSchoolTeacherClassReplace',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '教师请假',
+        path: '/safetyManagement/listSchoolTeacherLeave',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '教师车辆',
+        path: '/safetyManagement/listTeacherCar',
+        component: 'Layout',
+        children: []
+      }
+    ]
+  },
+  {
+    label: '问题答疑',
+    path: 'questionAnswer',
+    component: 'Layout',
+    children: [
+      {
+        label: '问题类型',
+        path: '/questionAnswer/listQuestionType',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '问题',
+        path: '/questionAnswer/listQuestionInfo',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '学生评论库',
+        path: '/questionAnswer/listSchoolStudentCommentLib',
+        component: 'Layout',
+        children: []
+      }
     ]
   },
   {

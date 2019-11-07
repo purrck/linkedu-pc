@@ -348,8 +348,8 @@
 
       getFileMessage(res) {
         let obj = res;
-        console.log('图片基本信息');
-        console.log(obj);
+        // console.log('图片基本信息');
+        // console.log(obj);
         this.formData.imagePath = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;
@@ -358,8 +358,8 @@
 
       getFileMessage(res) {
         let obj = res;
-        console.log('图片基本信息');
-        console.log(obj);
+        // console.log('图片基本信息');
+        // console.log(obj);
         this.formData.filePath = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;

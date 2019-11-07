@@ -285,7 +285,7 @@
     },
     methods: {
       async init() {
-        console.log(`detailPublishArticle is running...`)
+        // console.log(`detailPublishArticle is running...`)
         await api.getColumnSelect().then(res => {
           this.columnNames = res.data.data
         })
@@ -293,7 +293,7 @@
           return
         }
         api.getObj(this.articleId).then(res => {
-          console.log(res)
+          // console.log(res)
           this.formData = Object.assign({}, this.formData, res.data.data)
           if (this.formData.parentId) {
             this.formData.childColumnId = this.formData.columnId
@@ -313,7 +313,7 @@
         this.formData.imagePathList = val
       },
       getChangeHtml (val) {
-        console.log(val)
+        // console.log(val)
         this.formData.content = val
       },
       changeSelect(id) {

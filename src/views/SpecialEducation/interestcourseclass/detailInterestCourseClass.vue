@@ -1026,11 +1026,11 @@
     watch:{
       firstSchoolTerm(){
         this.formData.schoolYear=this.firstSchoolTerm+'-'+this.secondSchoolTerm
-        console.log(this.formData.schoolTerm)
+        // console.log(this.formData.schoolTerm)
       },
       secondSchoolTerm(){
         this.formData.schoolYear=this.firstSchoolTerm+'-'+this.secondSchoolTerm
-        console.log(this.formData.schoolTerm)
+        // console.log(this.formData.schoolTerm)
 
       },
     },
@@ -1053,7 +1053,7 @@
                 "name": interestCourseClassStatusItem.codeId
               });
             }
-            console.log(this.interestCourseClassStatusCodeOptions)
+            // console.log(this.interestCourseClassStatusCodeOptions)
           });
           this.getList();
           this.getInformation()
@@ -1082,16 +1082,16 @@
           this.formData.schoolId=this.grades.schoolId=userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
           api.getGradeList(this.grades).then(res => {
             this.optionsSelectData = res.data.data
-            // console.log(this.optionsSelectData);
+            // // console.log(this.optionsSelectData);
             this.optionsList3 = coverData(res.data.data.children, 'name', 'id')
           })
         },
 
       getStatusList() {
-        console.log(this.StatusList)
+        // console.log(this.StatusList)
         api.getStatusList(this.StatusList).then(res => {
           this.Subjects = res.data.data.records;
-          console.log(res.data.data)
+          // console.log(res.data.data)
           if (res.data.data.records.length===0){
             this.formData.subjectName='';
           }
@@ -1104,8 +1104,8 @@
         this.Subjects.map(item=>{
           if (item.subjectName === this.formData.subjectName){
             this.formData.subjectId=item.subjectId
-            console.log(item.subjectId)
-            console.log(item)
+            // console.log(item.subjectId)
+            // console.log(item)
           }
         })
       },
@@ -1118,7 +1118,7 @@
       },
 
       jsCallback(event) {
-        // console.log(event)
+        // // console.log(event)
         this.formData.teacherId = event.teacherId
         this.formData.teacherName = event.userName;
       },
@@ -1152,7 +1152,7 @@
           page : "1"
         }).then(res => {
           this.datas = res.data.data.records;
-          console.log(res.data.data.records)
+          // console.log(res.data.data.records)
           this.SET_IS_LOADING(false);
         }, res => {
           this.$message.error(res.message);
@@ -1201,12 +1201,12 @@
       getDetail(paramsId) {
         if (this.pageState !== 'add') {
           api.getObj(paramsId).then(res => {
-            // console.log(res.data.data)
+            // // console.log(res.data.data)
             if (res.data.resultCode === "000000") {
               this.formData = res.data.data
-              // console.log(this.formData)
+              // // console.log(this.formData)
               if (this.$route.params.type==="edit"){
-                console.log(this.formData.schoolYear)
+                // console.log(this.formData.schoolYear)
                 this.formData.schoolYear.split('-')
                 this.firstSchoolTerm = this.formData.schoolYear.split('-')[0]
                 this.secondSchoolTerm = this.formData.schoolYear.split('-')[1]
@@ -1220,7 +1220,7 @@
         // this.grades.schoolId=userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
         // api.getGradeList(this.grades).then(res => {
         //   this.optionsSelectData = res.data.data
-        //   // console.log(this.optionsSelectData);
+        //   // // console.log(this.optionsSelectData);
         //   this.optionsList3 = coverData(res.data.data.children, 'name', 'id')
         // })
       },

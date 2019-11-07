@@ -310,12 +310,12 @@
         })
       },
       xsCallback(event) {
-        console.log(event)
+        // console.log(event)
         this.formData.studentId = event.studentId;
         this.formData.studentUserName = event.userName;
       },
       jzCallback(event) {
-        console.log(event)
+        // console.log(event)
         this.formData.parentId = event.parentId;
         this.formData.parentUserName = event.userName;
 

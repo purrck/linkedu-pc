@@ -179,7 +179,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`coursePreview is running...`)
+      // console.log(`coursePreview is running...`)
     }
   }
 }

@@ -365,7 +365,7 @@
     created() {
       this.getDetail(this.$route.params.id);
           commonApi.getCodeIntType("studentCommentLevel").then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             let viewList = res.data.data || [];
             for (let studentCommentLevelItem of viewList) {
               this.studentCommentLevelCodeOptions.push({
@@ -396,7 +396,7 @@
     methods: {
     	finish(res) {
         //classId  className studentId studentUserId studentName
-        console.log(res.header);
+        // console.log(res.header);
         // || res.header[2].children[0].childr
         this.formData.classId = res.header[2].children[0].checked;
         this.formData.className = res.header[3].children[0].subTitle;

@@ -502,7 +502,7 @@
         this.showName=[];
         let arr = [];
         for (let item in res.header[3].children) {
-          // console.log(res.header[3].children[item]);
+          // // console.log(res.header[3].children[item]);
           let ori = res.header[3].children[item].checked
           arr = arr.concat(ori)
         }
@@ -517,14 +517,14 @@
           for (let j=0;j<res.header[3].children[i].checked.length;j++){  //allchildren
             for (let k=0;k<res.header[3].children[i].children.length;k++){
               if (res.header[3].children[i].checked[j]===res.header[3].children[i].children[k].id){
-                console.log(res.header[3].children[i].children[k].name)
+                // console.log(res.header[3].children[i].children[k].name)
                 this.showName = this.showName.concat(res.header[3].children[i].children[k].name)
               }
             }
           }
         }
         this.showNames=this.showName.join()
-        console.log(this.formData.studentUserIds);
+        // console.log(this.formData.studentUserIds);
 
         //parentUserId className classId
         // this.formData.parentUserId = res.header[4].children[0].checked;

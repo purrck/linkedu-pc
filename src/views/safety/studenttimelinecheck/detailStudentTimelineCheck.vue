@@ -439,7 +439,7 @@
       getDetail(paramsId) {
         if (this.pageState !== 'add') {
           api.getObj(paramsId).then(res => {
-            console.log(res);
+            // console.log(res);
             if (res.data.resultCode === "000000") {
               this.formData = res.data.data
             }

@@ -18,7 +18,9 @@ const _import = require('../router/_import')
 //学校管理端
 export default [
 
-  {label: '首页', name: '首页', path: '/page/wel', component: 'Layout', children: []},
+  {label: '首页', name: '首页', path: '/page/wel', component: 'Layout', children: [
+
+  ]},
   {
     label: '系统管理', name: '系统管理', path: '/admin', component: 'Layout', children: [
       {
@@ -55,7 +57,9 @@ export default [
   {
     label: '基础数据', name: '基础数据', path: '/basedata', component: 'Layout', children: [
       {
-        children: [],
+        children: [
+          
+        ],
         component: 'views/basedata/pageone',
         label: '学校管理',
         name: '学校管理',

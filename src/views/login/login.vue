@@ -9,7 +9,7 @@
     <div class="grey-login-content">
       <div class="flex row space-between y-center x-center" style="height: 300px">
         <div class="login-logo">
-          <img src="../../assets/img/icon-logo-4.png" alt="">
+          <img src="../../assets/img/icon-logo-zx.jpg" alt="">
         </div>
         <div style="width:35%">
           <div class="login-box-title">
@@ -79,7 +79,7 @@
         this.$router.push({'path': '/login'})
       },
       handleLogin() {
-        console.log(this.form);
+        // console.log(this.form);
         // this.$refs.loginForm.validate(valid => {
         //   if (valid) {
         this.$store.dispatch("LoginByUsername", this.form).then(res => {
@@ -131,7 +131,7 @@
     color: #fff;
     z-index: 3;
     .login-logo {
-      width: 35%;
+      width: 42%;
       img {
         /*height: 111px;*/
       }

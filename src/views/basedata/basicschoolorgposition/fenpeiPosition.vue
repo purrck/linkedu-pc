@@ -191,7 +191,7 @@
                   delete item.isAdd
                 })
               })
-              console.log(this.dataData)
+              // console.log(this.dataData)
 
               this.createLoading = true;
               api.addPiLiangObj(this.dataData).then(res => {
@@ -206,7 +206,7 @@
 
               })
 
-              console.log(this.classTeacherList)
+              // console.log(this.classTeacherList)
             },
             teacherFilter(){
               return this.teacherList.filter(item => {
@@ -301,7 +301,7 @@
                 })
               }
 
-              console.log(this.dataData)
+              // console.log(this.dataData)
               this.personData = data;
             },
             fenpeiClick(){
@@ -362,7 +362,7 @@
                 }
                 
               })*/
-console.log(this.dataData.userInfos)
+// console.log(this.dataData.userInfos)
               /*return ;
               if(!this.positionRadio){
                 this.$message.error("请选择部门");
@@ -377,8 +377,8 @@ console.log(this.dataData.userInfos)
               let teacherFilter = this.teacherFilter();
               let departFilter = this.departFilter();
 
-              console.log(this.departData)
-              console.log(this.positionData)
+              // console.log(this.departData)
+              // console.log(this.positionData)
 
               this.classTeacherList.push({
                 tempDepartId : this.departData.id,
@@ -402,7 +402,7 @@ console.log(this.dataData.userInfos)
                   
               })
 
-              console.log(this.dataData)
+              // console.log(this.dataData)
               
               /*this.selectedList = this.selectedList.filter(res => {
                 return item.teacherId != res.teacherId

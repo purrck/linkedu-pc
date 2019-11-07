@@ -34,7 +34,6 @@
       UE.getEditor('editor').addListener('contentChange',function(editor){
         _this.$emit('change',_this.editor.getContent())
       });
-      console.log(this.editor)
     },
     methods: {
       getUEContent() { // 获取内容方法

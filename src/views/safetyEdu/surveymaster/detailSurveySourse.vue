@@ -208,7 +208,7 @@
       },
 
       typeChange(id) {
-        console.log(arguments);
+        // console.log(arguments);
 
       },
 

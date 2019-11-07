@@ -333,7 +333,7 @@
             if (res.data.resultCode === "000000") {
               this.formData = res.data.data
               let arr = this.formData.gradeIds.split(',');
-              console.log(arr);
+              // console.log(arr);
               this.header[0].children[0].checked = this.formData.segmentId;
               this.header[1].children[0].checked = arr;
               this.showSend=true;

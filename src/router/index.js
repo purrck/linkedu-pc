@@ -1,6 +1,6 @@
 import HelloWorld from '@/components/HelloWorld'
 import login from '@/views/login/login'
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 import listStatisticsJobs from '@/views/admin/statisticsjobs/listStatisticsJobs'
 import detailStatisticsJobs from '@/views/admin/statisticsjobs/detailStatisticsJobs'
 import listStatisticsResults from '@/views/admin/statisticsresults/listStatisticsResults'

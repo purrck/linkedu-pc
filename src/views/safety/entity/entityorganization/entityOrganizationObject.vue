@@ -201,8 +201,8 @@ export default {
   },
   methods: {
     init () {
-      console.log(this.$route)
-      console.log(`entityOrganizationRange is running...`)
+      // console.log(this.$route)
+      // console.log(`entityOrganizationRange is running...`)
       common.getCodeIntType('userType').then(res => {
         this.userTypes = res.data.data
       })
@@ -271,7 +271,7 @@ export default {
       this.dialogDelete = true
     },
     dialogDeleteComfireHandler () {
-      console.log(this.multipleSelection)
+      // console.log(this.multipleSelection)
       this.isDel = true
       api.batchDelObj(this.multipleSelection).then(res => {
         this.isDel = false

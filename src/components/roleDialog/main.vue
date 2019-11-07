@@ -171,8 +171,6 @@
       },
       getRoleForDialog() {
         commonApi.getRoleForDialog(this.url, this.params).then((res) => {
-
-          console.log(res.data.data)
           if (res.data.resultCode == "000000") {
             this.data = res.data.data;
             this.list = res.data.data.records;

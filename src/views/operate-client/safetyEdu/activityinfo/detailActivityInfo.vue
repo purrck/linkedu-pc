@@ -458,7 +458,7 @@ export default {
     finish (val) {
       let {header} = val
       let extendData = JSON.stringify(header)
-      console.log(header)
+      // console.log(header)
       let province = []
       let city = []
       let area = []
@@ -622,7 +622,7 @@ export default {
             this.formData.filePath = this.formData.activityResourceAdVOList && this.formData.activityResourceAdVOList.map(res=>{
               return `${res.filePath}`
             }).join(",")
-            console.log("43")
+            // console.log("43")
             this.$forceUpdate();
             this.header = JSON.parse(this.formData.scope.extendData)
           }

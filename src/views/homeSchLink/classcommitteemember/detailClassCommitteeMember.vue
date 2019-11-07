@@ -386,7 +386,7 @@
     methods: {
       finish(res) {
         //classId  className studentId studentUserId studentName
-        console.log(res.header);
+        // console.log(res.header);
         // || res.header[2].children[0].childr
         this.formData.classId = res.header[2].children[0].checked;
         this.formData.className = res.header[3].children[0].subTitle;

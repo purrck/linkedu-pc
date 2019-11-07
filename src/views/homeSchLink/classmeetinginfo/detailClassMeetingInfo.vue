@@ -660,7 +660,7 @@
     },
     methods: {
       finish(res) {
-        console.log(res);
+        // console.log(res);
 
         // this.formData.className = res.header[3].children[0].subTitle;
         // // this.formData.studentId = res.header[3].children[0].checked
@@ -713,8 +713,8 @@
       },
       getFileMessage(res) {
         let obj = res;
-        //console.log('File基本信息');
-        //console.log(obj);
+        //// console.log('File基本信息');
+        //// console.log(obj);
         this.formData.filePath = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;
@@ -722,7 +722,7 @@
       },
       // 地图搜索
       localGpsSearch(e) {
-        console.log('触发了搜索')
+        // console.log('触发了搜索')
         this.localGpsKeyword = this.localGpsModel;
         let localGpsMap = this.$refs.localGpsBaidumap.map.gf;
         this.formData.localGps = localGpsMap.lat + "," + localGpsMap.lng + "," + this.formData.localGps;
@@ -738,7 +738,7 @@
       },
 
       localGpsPoint(type) {
-        console.log('触发了点击')
+        // console.log('触发了点击')
         // this.localGpsShow = true;
         let localGpsCurrPoint = type.point;
         this.localGpsMarkerPoint = {
@@ -749,8 +749,8 @@
       },
       getVideoMessage(res) {
         let obj = res;
-        console.log('Video基本信息');
-        //console.log(obj);
+        // console.log('Video基本信息');
+        //// console.log(obj);
         this.formData.meetingVideo = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;

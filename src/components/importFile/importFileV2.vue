@@ -276,7 +276,6 @@
     created(){
         this.SET_IS_LOADING(false);
         this.flag = this.$route.query.roleType;
-        console.log(this.$route.query)
     }
   }
 </script>

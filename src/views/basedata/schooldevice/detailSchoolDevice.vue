@@ -374,7 +374,7 @@
       changeInOutState(){
       },
       getPlaceNames() {
-        // console.log(this.childrenPlaceId)
+        // // console.log(this.childrenPlaceId)
         if (this.childrenPlaceId.length===1){   //选择主场所
           let placeId=this.childrenPlaceId[0]
           for (let i=0;i<this.palceTableDataList.length;i++){
@@ -405,7 +405,7 @@
         api.getPlaceList(this.place).then(res => {
           let palceList = res.data.data
           this.hasChildrenPlace = res.data.data
-          // console.log(this.palceTableDataList);
+          // // console.log(this.palceTableDataList);
           // this.palceTableData=res.data.data
 
           for (let i=0;i<palceList.length;i++){
@@ -436,7 +436,7 @@
       //   let userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
       //   this.place.schoolId=userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
       //   api.getPlaceList(this.place).then(res => {
-      //     console.log(res.data.data);
+      //     // console.log(res.data.data);
       //     this.palceTableData=res.data.data
       //     for (let i=0;i<this.palceTableData.length;i++){
       //       this.palceTableDataList.push({placeName:this.palceTableData[i].placeName,placeId:this.palceTableData[i].placeId}  );
@@ -487,7 +487,7 @@
               this.formData = res.data.data
               let placeId=this.formData.placeId
               this.childrenPlaceId=[]
-              // console.log(this.palceTableDataList)
+              // // console.log(this.palceTableDataList)
 //创建一个有children的场所列表
 //               for (let i=0;i<this.hasChildrenPlace.length;i++){
 //                   placeIdArr.push({placeName:this.hasChildrenPlace[i].placeName,placeId:this.hasChildrenPlace[i].placeId,children:[]});
@@ -501,7 +501,7 @@
                     if (placeId === this.hasChildrenPlace[i].children[j].placeId){
                       this.childrenPlaceId.push(this.hasChildrenPlace[i].placeId)
                       this.childrenPlaceId.push(this.hasChildrenPlace[i].children[j].placeId)
-                      // console.log(this.childrenPlaceId)
+                      // // console.log(this.childrenPlaceId)
                       break
                     }
                   }
@@ -513,7 +513,7 @@
                 }
               }
 
-              console.log(this.childrenPlaceId)
+              // console.log(this.childrenPlaceId)
             }
             this.isLoaded = false;
           })

@@ -81,8 +81,6 @@ export default {
   mounted() {},
   methods: {
     mousemove (index,value) {
-      // console.log(this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div")[0].clientWidth)
-      // console.log(this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div"))
       let item = this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div");
       if(item[0].clientWidth === 160) {
         item[0].innerText = value
@@ -90,8 +88,6 @@ export default {
     },
 
     mouseleave (index,value) {
-      console.log(this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div")[0].clientWidth)
-      console.log(this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div"))
       let item = this.$refs.leftMemu.getElementsByTagName("li")[index+1].getElementsByTagName("div");
       if(item[0].clientWidth === 36) {
         item[0].innerText = value
@@ -103,7 +99,6 @@ export default {
     },
 
     choeseThree(item, index) {
-      console.log(item.path, item.query)
       this.$store.commit("SET_ACTIVETHREE", item.label);
 
       if (!item.children.length) {

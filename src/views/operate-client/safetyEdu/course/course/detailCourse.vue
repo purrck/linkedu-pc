@@ -894,7 +894,7 @@
         this.bohuiVisible = true;
       },
       fileFinish(data) {
-        console.log(data)
+        // console.log(data)
       },
 
       sendFinish(data) {
@@ -963,12 +963,12 @@
       },
 
       uploadDataFJ(data) {
-        //console.log(data.replace(",",";"))
+        //// console.log(data.replace(",",";"))
         this.formData.filePath = data
       },
 
       wenjuanClose() {
-        console.log("232232")
+        // console.log("232232")
       },
 
       addWenJuan() {
@@ -1058,7 +1058,7 @@
       checkHandle() {
         this.formData.clickType = "next"
         this.formData.courseStatusCode = "approving"
-        console.log(this.formData)
+        // console.log(this.formData)
         this.submit('formData', 'approving')
         this.$message.success('提交审核')
       },
@@ -1168,7 +1168,7 @@
             this.testMultiple = data
             break
         }
-        console.log(this.$data)
+        // console.log(this.$data)
       },
       handle(type, item, index) {
         switch (type) {
@@ -1196,7 +1196,7 @@
       },
       handleClick(item, index, index1) {
         this.currentItemIndex = `${index}${index1}`
-        console.log(item.accessPath)
+        // console.log(item.accessPath)
         this.detail.formData.currentUrl = item.accessPath
       },
 

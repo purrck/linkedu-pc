@@ -220,7 +220,7 @@ export default {
       return ++i
     },
     handle (type, item1, index) {
-      console.log(type)
+      // console.log(type)
       let item = JSON.parse(JSON.stringify(item1))
       switch (type) {
         case 'plus':
@@ -246,7 +246,7 @@ export default {
         }
 
       }
-      console.log(this.formData.questionList)
+      // console.log(this.formData.questionList)
       this.$forceUpdate()
     },
     enter () {

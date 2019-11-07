@@ -188,7 +188,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -209,7 +209,7 @@
           this.$message.error("请选择学段");
           return;
         }
-        console.log(this.checkedSegment)
+        // console.log(this.checkedSegment)
         this.segmentAddLoading = true;
         api.addLotSegment(this.checkedSegment).then(res => {
           this.segmentAddLoading = false;
@@ -221,7 +221,7 @@
         //this.dialogVisible = false;
       },
       checkboxGroupChange(event){
-        console.log(event)
+        // console.log(event)
       },
       addSegment(){
         let opath = '/basedata/listSchoolSegment/addSegment'
@@ -243,7 +243,7 @@
         this.multipleSelection = val.map(item => {
           return item.schoolSegmentId
         });
-        console.log(this.multipleSelection);
+        // console.log(this.multipleSelection);
       },
       handleSizeChange(size) {
         this.params.limit = size;
@@ -286,7 +286,7 @@
           })
           this.data = res.data.data;
           this.isLoaded = false;
-          console.log(this.flag)
+          // console.log(this.flag)
         }, res => {
           this.$message.error(res.message);
         });

@@ -300,7 +300,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -483,7 +483,7 @@
       sortChange(obj) {
         this.params.orderByField = obj.prop;
         this.params.isAsc = obj.order === "ascending" ? true : false;
-        console.log(this.$route)
+        // console.log(this.$route)
         this.setCurrentPage(this.$route.fullPath, this.params)
         this.isLoaded = true;
         this.getList();
@@ -530,7 +530,7 @@
         formData.append('classId', this.$route.query.classId);
         if (this.typeCode === 1) {
           // uploadFile(formData).then(res=>{
-          //   console.log(res);
+          //   // console.log(res);
           // })
           api.uploadClassStudentHeader(formData).then(res=>{
             if (res.data.resultCode === "000000"&&res.data.data === true) {
@@ -597,26 +597,26 @@
 
           if (this.typeCode === 'B') {
             //有Id编辑 无就新增
-            console.log(event.rfId)
+            // console.log(event.rfId)
             obj.deviceNum = event.rfNum
             if(event.rfId) {
-              console.log('编辑')
+              // console.log('编辑')
               obj.studentDeviceId = event.rfId
               this.deviceEdit(obj)
             }else {
-              console.log('新增')
+              // console.log('新增')
               this.deviceAdd(obj)
             }
           }else if (this.typeCode === 'C') {
             //有Id编辑 无就新增
-            console.log(event.handId)
+            // console.log(event.handId)
             obj.deviceNum = event.handNum
             if(event.handId) {
-              console.log('编辑')
+              // console.log('编辑')
               obj.studentDeviceId = event.handId
               this.deviceEdit(obj)
             }else {
-              console.log('新增')
+              // console.log('新增')
               this.deviceAdd(obj)
             }
           }
@@ -662,7 +662,7 @@
             res.showHand= false
           }
         })
-        console.log(this.data)
+        // console.log(this.data)
       },
       search() {
         this.params.page = 1;

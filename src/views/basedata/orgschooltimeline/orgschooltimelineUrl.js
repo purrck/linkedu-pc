@@ -56,7 +56,7 @@ export default {
     })
   },
   disabled(data) {
-    console.log(data)
+    // console.log(data)
     return axios({
       url: `${baseUrl}/${routePath}/${modelName}Ad/disable`,
       method: 'put',

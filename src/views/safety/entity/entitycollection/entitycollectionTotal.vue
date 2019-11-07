@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`entitycollectionTotal is running...`)
+      // console.log(`entitycollectionTotal is running...`)
     }
   }
 }

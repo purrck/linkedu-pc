@@ -116,7 +116,6 @@ export default {
           }
         }
         this.gradeList = a;
-        console.log(a);
 
         this.gradeList.map((item, index) => {
           if (item.id == this.conf.gradeId) {

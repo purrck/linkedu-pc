@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`messageManageTotal is running...`)
+      // console.log(`messageManageTotal is running...`)
     }
   }
 }

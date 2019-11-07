@@ -27,7 +27,7 @@ export default {
         $event.preventDefault();
         obj.show = true;
         obj.currentImg = $event.target.src;
-        console.log(obj.show)
+        // console.log(obj.show)
       }
     });
   }

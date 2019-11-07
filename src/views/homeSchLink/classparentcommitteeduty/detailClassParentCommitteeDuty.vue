@@ -264,7 +264,7 @@
     methods: {
       finish(val) {
         let resData = val.header;
-        console.log(resData);
+        // console.log(resData);
         let temp = [];
         let claTem = [];
         this.formData.segmentId = resData[0].children[0].checked;

@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`dangerTotal is running...`)
+      // console.log(`dangerTotal is running...`)
     }
   }
 }

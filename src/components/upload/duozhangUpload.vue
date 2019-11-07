@@ -44,10 +44,10 @@ export default {
     },
   },
   created(){
-    // console.log(this.url)
+    // // console.log(this.url)
   },
   mounted(){
-    // console.log(this.url)
+    // // console.log(this.url)
   },
   methods: {
     //删除图片
@@ -60,8 +60,8 @@ export default {
     },
     change (event) {
       this.uploadFile(event.target.files[0], res => {
-        console.log('retrun');
-        console.log(res);
+        // console.log('retrun');
+        // console.log(res);
         this.url.push(res)
         this.$emit('input', this.url.join(","))
       })

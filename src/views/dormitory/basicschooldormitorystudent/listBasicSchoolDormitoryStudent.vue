@@ -272,7 +272,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -326,10 +326,10 @@
         })
       },
       getStatusList() {
-        console.log(this.StatusList)
+        // console.log(this.StatusList)
         api.getStatusList(this.StatusList).then(res => {
           this.Subjects = res.data.data.records;
-          console.log(res.data.data)
+          // console.log(res.data.data)
           if (res.data.data.records.length === 0) {
             this.formData.subjectName = '';
           }
@@ -384,8 +384,8 @@
         this.getList();
       },
       getList() {
-        // console.log(this.$route.query.dormitoryRoomId)
-        // console.log(this.$route.query.dormitoryId)
+        // // console.log(this.$route.query.dormitoryRoomId)
+        // // console.log(this.$route.query.dormitoryId)
         if (this.$route.query.dormitoryId !== "undefined") {
           if (this.$route.query.dormitoryRoomId !== undefined) {
             this.hiddenAdd = true
@@ -403,7 +403,7 @@
         this.grades.schoolId = userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
         api.getGradeList(this.grades).then(res => {
           this.optionsSelectData = res.data.data
-          console.log(this.optionsSelectData.children);
+          // console.log(this.optionsSelectData.children);
           this.optionsList3 = coverData(res.data.data.children, 'name', 'id')
         })
       },

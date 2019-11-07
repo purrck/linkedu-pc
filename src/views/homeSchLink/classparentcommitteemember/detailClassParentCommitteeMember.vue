@@ -393,7 +393,7 @@
     },
     methods: {
       finish(res) {
-        console.log(res);
+        // console.log(res);
 
         this.formData.studentUserId = res.header[3].children[0].checked;
         res.header[3].children[0].children.forEach(res => {

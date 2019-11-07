@@ -246,7 +246,7 @@
 
       this.formData.securityOrganizationId=this.$route.params.id
 
-      // console.log(this.formData.securityOrganizationId)
+      // // console.log(this.formData.securityOrganizationId)
     },
     methods: {
       submit(formName) {

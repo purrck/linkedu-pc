@@ -494,7 +494,7 @@ export default {
       }
     },
     change (e) {
-      console.log(e)
+      // console.log(e)
       this.entityNames = [];
       this.formData.entityId = '';
       api.getContentByEntityType(e).then(res => {

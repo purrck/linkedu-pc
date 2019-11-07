@@ -243,7 +243,7 @@
           this.sonList.records = treeList.children;
           this.listLoading = false;
         }).catch((error) => {
-          console.log(error)
+          // console.log(error)
         })
       },
       //加载列表
@@ -255,12 +255,12 @@
           this.sonList = sonList;
           this.listLoading = false
         }).catch((error) => {
-          console.log(error)
+          // console.log(error)
         });
       },
       handleNodeClick(data) {
-        console.log('handleNodeClick');
-        console.log(data);
+        // console.log('handleNodeClick');
+        // console.log(data);
         let arr = [];
         arr.push(data)
         if(data.children.length){
@@ -386,9 +386,9 @@
       },
       update(formName) {
         const set = this.$refs
-        console.log('this.form');
+        // console.log('this.form');
         this.form.records = null;
-        console.log(this.form);
+        // console.log(this.form);
         set[formName].validate(valid => {
           if (valid) {
             this.listLoading = true

@@ -431,7 +431,7 @@ export default {
           })
         } else if (this.pageState === 'add' && valid) {
           this.formLoading = true;
-          console.log(this.formData)
+          // console.log(this.formData)
           api.addObj(this.formData).then(res => {
             if (res.data.resultCode === '000000') {
               this.formLoading = false

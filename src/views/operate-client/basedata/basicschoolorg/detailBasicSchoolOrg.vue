@@ -724,7 +724,7 @@
       },
       //学段事件
       xueduanChange(event) {
-        console.log(event)
+        // console.log(event)
       },
       //地区名称
       getCity(data) {
@@ -732,7 +732,7 @@
       },
       //图片上传
       uploadData(res) {
-        console.log(res)
+        // console.log(res)
         this.formData.imagePath = res;
       },
       //编辑器

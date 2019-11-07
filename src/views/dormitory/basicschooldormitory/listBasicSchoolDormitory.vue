@@ -905,9 +905,9 @@
       chapterVisible() {
         if (this.chapterVisible === false){
           this.closeWebSocket()
-          console.log('断开连接')
+          // console.log('断开连接')
           clearInterval(this.isbeginSetInterval)
-          console.log('已清除定时器')
+          // console.log('已清除定时器')
         }
       },
       forChangeArray(){
@@ -928,7 +928,7 @@
     // },
     // activated() {
     //   //只刷新数据，不改变整体的缓存
-    //   console.log('重新活跃路由');
+    //   // console.log('重新活跃路由');
     //   let query = this.$route.query;
     //   for (let item in query) {
     //     this.params[item] = query[item]
@@ -1005,7 +1005,7 @@
         // this.optionsEnterTwo =[]
         // this.options = []
         // this.optionsTwo =[]
-        // console.log(this.studentData)
+        // // console.log(this.studentData)
         // let getIn=[]
         // let getOut=[]
         if(this.newData.inCheck.length>0) {
@@ -1050,27 +1050,27 @@
       },
       websocketonopen(){ //连接建立之后执行send方法发送数据
         //this.websocketsend(JSON.stringify(this.getWatch));
-        console.log('已连接')
+        // console.log('已连接')
       },
       websocketonerror(){//连接建立失败重连
-        console.log('已断开连接')
+        // console.log('已断开连接')
         if (this.connectionNum<4){   //只会重连3次
           this.connectionNum++
           this.initWebSocket();
         }else{
           // alert('监控已断开，已重连了3次，请刷新再连接')
-          console.log('已重连了3次，请刷新再连接')
+          // console.log('已重连了3次，请刷新再连接')
         }
       },
       websocketonmessage(e){ //数据接收
         this.forChangeArray = this.newData = JSON.parse(e.data);
-          console.log(this.newData)
+          // console.log(this.newData)
       },
       websocketsend(Data){//数据发送
         // this.websock.send(Data);
       },
       websocketclose(e){  //关闭
-        console.log('断开连接',e);
+        // console.log('断开连接',e);
       },
       closeWebSocket(){
         this.websock.close()
@@ -1079,7 +1079,7 @@
 
 
       keepData(formName, deleteOne) {   //验证表单  and 添加数据后删除显示
-        console.log(deleteOne)
+        // console.log(deleteOne)
         const set = this.$refs;
         set[formName].validate(valid => {
           if (this.pageState === 'edit' && valid) {
@@ -1118,8 +1118,8 @@
         this.insiteVisitor.index = index
         this.$forceUpdate()   //手动渲染数据，
 
-        console.log(this.insiteVisitor)
-        // console.log(dateFilter('来访时间'+val.happenedDt));
+        // console.log(this.insiteVisitor)
+        // // console.log(dateFilter('来访时间'+val.happenedDt));
           // this.insiteVisitor.sex = val.sex
           // this.insiteVisitor.cardNum = val.id
           // if (val.sex === 'F') {
@@ -1276,7 +1276,7 @@
         })
       },
       addChapter(val) {
-        // console.log(val)
+        // // console.log(val)
         this.dormitoryName = val.dormitoryName
         //提供参数给添加访问
         this.getWatch.dormitoryId = this.insiteVisitor.dormitoryId = this.studentsLeaveNumForm.dormitoryId = val.dormitoryId  //给监控提供参数 and 来访  and 学生请假
@@ -1309,10 +1309,10 @@
         this.isbeginSetInterval = setInterval(this.showLeave,3600000)
       },
       showLeave(){
-        console.log(new Date())
+        // console.log(new Date())
         let todaySix = Number(new Date(new Date(new Date().toLocaleDateString()).getTime()+6*60*60*1000-1)) ;
         let todayNow = Number(new Date());
-        // console.log(this.isToDay)
+        // // console.log(this.isToDay)
         if (this.isToDay !== todaySix){
           this.once = true
         }
@@ -1322,8 +1322,8 @@
           // alert('要重新获取数据了')
         }
         this.isToDay = todaySix
-        // console.log(todaySix);
-        // console.log(todayNow);
+        // // console.log(todaySix);
+        // // console.log(todayNow);
       },
       getStudentsLeaveNum(){
         let date = new Date();
@@ -1348,9 +1348,9 @@
         getStudentsForm.limit = 9999
         api.getAllStudents(getStudentsForm).then(res => {
           let data = this.studentData = res.data.data.records;
-          // console.log(this.studentData)
+          // // console.log(this.studentData)
           this.liveingStudentNum = 0
-          // console.log(res.data.resultCode)
+          // // console.log(res.data.resultCode)
           //统计可用学生
           data.map(item => {
             if (item.accommodationStatusCodeStr !== '' && item.accommodationStatusCodeStr !== undefined) {

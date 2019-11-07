@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`studentTimelineCheckTotal-wrap is running...`)
+      // console.log(`studentTimelineCheckTotal-wrap is running...`)
     }
   }
 }

@@ -221,7 +221,7 @@
     },
     methods: {
       init() {
-        console.log(`sendObject is running...`)
+        // console.log(`sendObject is running...`)
         this.getChecked(this.header);
         // console.error(arr);
         this.initData()
@@ -232,10 +232,10 @@
           item.isActive = false
         });
         let isNesx = this.treeData[this.index].children.some(res => {
-          console.log(res.checked)
+          // console.log(res.checked)
           return res.checked.length !== 0
         })
-        console.log(isNesx);
+        // console.log(isNesx);
         this.menuData[0].isActive = true;
         this.handleClick(this.menuData[0], 0);
         this.$forceUpdate()
@@ -252,10 +252,10 @@
           })
         });
         this.checkedArr = arr;
-        console.log(arr);
+        // console.log(arr);
       },
       handleClick(item, index) {
-        console.log(item.single);
+        // console.log(item.single);
         this.menuData.forEach(it => {
           it.isActive = false
         });
@@ -284,7 +284,7 @@
         item.isCheckAll = false
       },
       deleteOther(e, item, index) {
-        console.log(item);
+        // console.log(item);
 
         this.treeData[this.index + 1].children.forEach(res => {
           res.checked = [];

@@ -151,7 +151,7 @@
                 return
               }
 
-              console.log(this.dataData)
+              // console.log(this.dataData)
               this.createLoading = true;
               api.addPiLiangObj([this.dataData]).then(res => {
                 if (res.data.resultCode == "000000") {
@@ -165,7 +165,7 @@
 
               })
 
-              console.log(this.classTeacherList)
+              // console.log(this.classTeacherList)
             },
             teacherFilter(){
               return this.teacherList.filter(item => {
@@ -224,7 +224,7 @@
 
 
 
-              console.log(this.dataData)
+              // console.log(this.dataData)
               this.personData = data;
             },
             fenpeiClick(){
@@ -256,8 +256,8 @@
               let teacherFilter = this.teacherFilter();
               let departFilter = this.departFilter();
 
-              console.log(this.departData)
-              console.log(this.positionData)
+              // console.log(this.departData)
+              // console.log(this.positionData)
 
               this.classTeacherList.push({
                 tempDepartId : this.departData.id,
@@ -282,7 +282,7 @@
               this.teacherCheckbox = this.teacherCheckbox.filter(res => {
                 return item.teacherId != res
               })
-              console.log(this.teacherCheckbox)
+              // console.log(this.teacherCheckbox)
 
               /*this.teacherList.push({
                 className : item.className,

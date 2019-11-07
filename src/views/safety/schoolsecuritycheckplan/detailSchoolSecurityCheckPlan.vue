@@ -494,7 +494,7 @@ export default {
     }
 
     api.baoweikeList().then(res => {
-      console.log(res)
+      // console.log(res)
 
       this.optionsList6 = res.data.data
     },res => {
@@ -540,12 +540,12 @@ export default {
       this.formData.planedUserName = event.userName
     },
     adminDepartChange(event){
-      console.log(event)
+      // console.log(event)
       this.formData.adminDepartName = event.label
     },
     userChange(event){
       this.formData.userName = event.label
-      console.log(event)
+      // console.log(event)
     },
     checkRouteChange(event){
       this.formData.routeName = event.label
@@ -611,11 +611,11 @@ export default {
             for(let key in this.formData){
               this.formData[key] = res.data.data[key]
             }
-            console.log(this.formData)
+            // console.log(this.formData)
             this.optionsList4.map(item => {
 
               if(item.value == this.formData.adminDepartId){
-                console.log("22")
+                // console.log("22")
                 //this.optionsList5 = item.children
                 this.optionsList5 = coverData(item.children || [], 'name', 'id')
               }

@@ -285,7 +285,7 @@ export default {
 
   activated() {
     //只刷新数据，不改变整体的缓存
-    console.log('重新活跃路由');
+    // console.log('重新活跃路由');
     let query = this.$route.query;
     for (let item in query) {
       this.params[item] = query[item]
@@ -409,7 +409,7 @@ export default {
     },
     toDetail (id) {
       let opath = '/safety/checkListManageDetaildetail/' + id
-      console.log(opath)
+      // console.log(opath)
       this.$router.push({path: opath})
     },
     pushEntity (item) {

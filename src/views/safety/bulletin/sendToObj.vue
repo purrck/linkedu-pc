@@ -103,7 +103,7 @@
             
             this.SET_IS_LOADING(false)
            /* this.$store.dispatch("subjectTeacherTree").then(res => {
-                console.log("222")
+                // console.log("222")
             })
             commonApi.getCodeIntType('userType').then(item => {
                 this.userTypeList = item.data.data
@@ -112,7 +112,7 @@
         methods:{
             ...mapMutations(["SET_IS_LOADING"]),
             finish(data){
-              console.log(data)
+              // console.log(data)
               let _a = {
                 "bulletinId":this.bulletinId,
                 "scopeVO":{
@@ -130,7 +130,7 @@
               _a.scopeVO.classIds = data.header[2].children[0].checked*/
               
 
-              console.log(_a);
+              // console.log(_a);
 
               bulletinUserRuleAdNew(_a).then((res) => {
                   if (res.data.resultCode === "000000") {
@@ -152,7 +152,7 @@
 
                 
                 this.gradeList = this.segmentList[index].children
-                console.log(this.gradeList)
+                // console.log(this.gradeList)
             },
             handlerReview(){
                 //let content = this.$refs.ue.getUEContent();
@@ -160,7 +160,7 @@
                 var storage=window.localStorage;
                     storage.setItem("reviewContent",content);
                 //this.review.visible = true;
-                console.log(this.form1)
+                // console.log(this.form1)
                 this.$router.push({ path: `/safety/preview` , query : this.form1 })
                 
             }

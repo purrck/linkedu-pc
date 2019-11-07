@@ -34,18 +34,15 @@ export default {
     this.box = this.$refs.viewBox
     // 监听这个dom的scroll事件\
     // window.addEventListener("scroll", function(){
-      // console.log('scrolling');
-      // console.log(arguments[0].target.scrollingElement.scrollTop);
+      // // console.log('scrolling');
+      // // console.log(arguments[0].target.scrollingElement.scrollTop);
     // });
 
   },
   created() {
-    console.log(this.$router);
   },
   methods: {
     scrolls() {
-      console.log('arguments');
-      console.log(arguments);
     }
   },
   computed: {}

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="top-index">
     <div class="top">
       <div class="top-logo flex center">
         <img src="../../../assets/img/icon_yunying.png" v-if="roleType === 'site'" alt="">
@@ -11,37 +11,30 @@
           <li v-for="(item,index) in routerOne" :key="index" :class="{is_active:activeOne===item.label}"
               @click="choeseMenuOne(item,index)">{{item.label}}
           </li>
-          <!--<div style="padding-left: 100px">-->
-          <!--<el-button @click="changeRole('bulletinUserRule
-          Form')" :class="roleTest==='开发端'?'classLeader':'classTeacher'"d>-->
-          <!--{{roleTest}}-->
-          <!--</el-button>-->
-          <!--</div>-->
         </ul>
       </div>
-      <div class="top-linLogo"><img src="~@/assets/img/icon-shape-lin.png"/></div>
-      <div class="top-userInfo bl flex row x-center">
-        <el-tooltip class="item" effect="dark" content="用户头像" placement="bottom">
-          <img class="top-userImg" :src="userInfo.headPicture || require('../../../assets/img/icon-header.png')"/>
-        </el-tooltip>
+      <div class="top-right">
+        <div class="top-linLogo"><img src="~@/assets/img/icon-shape-lin.png"/></div>
+        <div class="top-userInfo bl flex row x-center">
+          <el-tooltip class="item" effect="dark" content="用户头像" placement="bottom">
+            <img class="top-userImg" :src="userInfo.headPicture || require('../../../assets/img/icon-header.png')"/>
+          </el-tooltip>
 
-        <el-dropdown>
+          <el-dropdown>
           <span class="el-dropdown-link">
-            {{userInfo.firstName}}<span v-if="userInfo.extValues&&userInfo.extValues.schoolOrg">{{" | "+userInfo.extValues.schoolOrg.schoolOrgName}}</span>
+            {{userInfo.firstName}}<span v-if="userInfo.extValues&&userInfo.extValues.schoolOrg">
+            {{" | "+userInfo.extValues.schoolOrg.schoolOrgName}}</span>
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
-          <!--</el-tooltip>-->
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>
-              <router-link to="/">首页</router-link>
-            </el-dropdown-item>
-<!--            <el-dropdown-item>-->
-<!--              <router-link to="/info/index">修改信息</router-link>-->
-<!--            </el-dropdown-item>-->
-            <!--<el-dropdown-item @click.native="showAotherChildren(item.classId)" v-for="(item,index) in childrenIds" :key="index" v-model="idChangeEvent" :value="item.classId" ><sapn  >{{item.userName}}</sapn></el-dropdown-item>-->
-            <el-dropdown-item @click.native="logout" divided>退出</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>
+                <router-link to="/">首页</router-link>
+              </el-dropdown-item>
+              <el-dropdown-item @click.native="logout" divided>退出</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
+
       </div>
     </div>
 
@@ -54,7 +47,6 @@
       </div>
     </div>
   </div>
-
 </template>
 <script>
   import {mapState, mapGetters} from "vuex";
@@ -102,7 +94,6 @@
             b = "http://47.106.35.119:5388"
           }
           let opath = b+'/#/WebTologin?token='+ getToken() + '&userId=' + userId;
-          console.log(opath);
           window.open(opath,'_blank');
         }
         if (!this.routerOne[index].children.length&&path!=='/files/index') {
@@ -123,8 +114,6 @@
           })
         } else {
           let threeIndex = this.routerTwo[index].children[0];
-          console.log('三级导航的儿子');
-          console.log(threeIndex);
           this.$store.commit("SET_ROUTHERTHREE", this.routerTwo[index].children);
           this.$store.commit("SET_ACTIVETHREE", threeIndex.label);
           this.$store.commit("SET_TAG_TYPE",threeIndex);
@@ -170,119 +159,128 @@
 </script>
 
 <style lang="scss" scoped>
-  .top {
-    align-items: center;
-    background-color: #fff;
-    padding: 0 40px 0 0;
-    display: flex;
-    flex: 1;
-    font-size: 18px;
-    color: #999;
-    height: 72px;
-    white-space: nowrap;
-
-    .top-logo {
-      width: 240px;
-
-      img {
-        width: 175px;
-      }
-    }
-
-    .top-menu {
-      /*overflow: hidden;*/
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: inherit;
-      font-weight: 400;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
+  .top-index {
+    .top {
+      align-items: center;
+      background-color: #fff;
+      padding: 0 40px 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       flex: 1;
-      padding: 0 40px;
+      font-size: 18px;
+      color: #999;
+      height: 72px;
+      white-space: nowrap;
 
-      ul {
-        li {
-          margin-right: 55px;
-          height: 40px;
-          font-size: 16px;
-          line-height: 40px;
-          /*border-bottom: 2px #fff solid;*/
-          cursor: pointer;
+      .top-logo {
+        width: 240px;
+
+        img {
+          width: 175px;
         }
       }
 
-      .is_active {
-        /*border-color: #509A8F;*/
-        color: #509A8F;
+      .top-menu {
+        /*overflow: hidden;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: inherit;
+        font-weight: 400;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        max-width: 55%;
+        overflow-x: auto;
+        padding: 0 40px;
+
+        ul {
+          li {
+            margin-right: 55px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            /*border-bottom: 2px #fff solid;*/
+            cursor: pointer;
+          }
+        }
+
+        .is_active {
+          /*border-color: #509A8F;*/
+          color: #509A8F;
+        }
+      }
+      .top-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .top-linLogo {
+          display: flex;
+          width: 60px;
+          justify-content: center;
+          align-items: center;
+        }
+        .top-userInfo {
+          display: flex;
+          position: relative;
+          border: 1px solid #93BF88;
+          height: 38px;
+          padding: 0 10px;
+          border-radius: 40px;
+
+          .el-dropdown-link {
+            i {
+              color: #93BF88;
+            }
+          }
+
+          .top-userImg {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            border-radius: 100%;
+            box-sizing: border-box;
+          }
+        }
+
       }
     }
 
-  }
-
-  .top-linLogo {
-    display: flex;
-    width: 60px;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .top-userInfo {
-    display: flex;
-    position: relative;
-    border: 1px solid #93BF88;
-    height: 38px;
-    padding: 0 10px;
-    border-radius: 40px;
-
-    .el-dropdown-link {
-      i {
-        color: #93BF88;
-      }
-    }
-
-    .top-userImg {
-      width: 32px;
-      height: 32px;
-      margin-right: 10px;
-      border-radius: 100%;
-      box-sizing: border-box;
-    }
-  }
-
-  .abstract {
-    width: 100%;
-    background: #93BF88;
-    //overflow-y: auto;
-    line-height: 30px;
-
-    .abstract-nav {
-      padding: 6px 30px 6px 266px;
-      display: flex;
+    .abstract {
+      width: 100%;
       background: #93BF88;
-      flex-direction: row;
-      flex-wrap: wrap;
+      //overflow-y: auto;
+      line-height: 30px;
 
-      .abstract-item {
-        font-size: 14px;
-        color: white;
-        padding:0 10px;
-        border-radius: 4px;
-        margin-right: 30px;
+      .abstract-nav {
+        padding: 6px 30px 6px 266px;
+        display: flex;
         background: #93BF88;
-        cursor: pointer;
-      }
+        flex-direction: row;
+        flex-wrap: wrap;
 
-      div:hover {
-        background: #FFFFFF;
-        color: #93BF88;
-      }
+        .abstract-item {
+          font-size: 14px;
+          color: white;
+          padding:0 10px;
+          border-radius: 4px;
+          margin-right: 30px;
+          background: #93BF88;
+          cursor: pointer;
+        }
 
-      .is_active {
-        background: #FFFFFF;
-        color: #93BF88;
+        div:hover {
+          background: #FFFFFF;
+          color: #93BF88;
+        }
+
+        .is_active {
+          background: #FFFFFF;
+          color: #93BF88;
+        }
       }
     }
   }
+
 </style>
 

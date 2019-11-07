@@ -1,4 +1,4 @@
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 
 import basicschooldormitoryRouter from  "@/views/dormitory/basicschooldormitory/basicschooldormitoryRouter"  //宿舍
 import basicschooldormitoryroomRouter from  "@/views/dormitory/basicschooldormitoryroom/basicschooldormitoryroomRouter"  //寝室

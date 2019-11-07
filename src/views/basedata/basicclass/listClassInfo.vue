@@ -368,7 +368,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -413,7 +413,7 @@
 
       },
       confirm() {
-        console.log(this.getSementGrade);
+        // console.log(this.getSementGrade);
         //this.dialogVisible = false
       },
       addClassNum(event) {
@@ -887,7 +887,7 @@
 
         //let opath = 'http://192.168.2.60:3088/#/' + path + '?classId=' + id+'&token='+ getToken() + '&userId=' + userId;
         //let opath = `http://192.168.2.194:9999/#/WebTologin?token=${getToken()}&userId=${userId}&username=${username}`
-        console.log(opath);
+        // console.log(opath);
         window.open(opath,'_blank');
       },
       getclassTypeCodeStr(row) {

@@ -225,7 +225,7 @@
     },
     methods: {
       init() {
-        console.log(`sendObject is running...`)
+        // console.log(`sendObject is running...`)
         this.getChecked(this.header);
         this.initData()
       },
@@ -250,7 +250,7 @@
           })
         });
         this.checkedArr = arr;
-        console.log(arr);
+        // console.log(arr);
       },
       handleClick(item, index) {
         this.treeData[this.index].children.forEach(it => {
@@ -309,7 +309,7 @@
         item.isCheckAll = false
       },
       deleteOther(e, item, index) {
-        console.log(item);
+        // console.log(item);
 
         this.treeData[this.index + 1].children.forEach(res => {
           res.checked = [];

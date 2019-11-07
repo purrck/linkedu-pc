@@ -21,10 +21,8 @@
         },
         methods : {
             change(event){
-                console.log(event);
                 this.uploadFile(event.target.files[0], res => {
                     this.callback(res);
-                    console.log(res)
                 })
             }
         }

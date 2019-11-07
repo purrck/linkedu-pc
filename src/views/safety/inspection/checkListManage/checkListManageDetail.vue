@@ -718,8 +718,8 @@ export default {
 
     getFileMessage (res) {
       let obj = res
-      console.log('图片基本信息')
-      console.log(obj)
+      // console.log('图片基本信息')
+      // console.log(obj)
       this.formData.filePath = res.urlurl
       this.formData.url = res.urlurl
       this.formData.sizes = res.size
@@ -747,8 +747,8 @@ export default {
 
     getVideoMessage (res) {
       let obj = res
-      console.log('视频基本信息')
-      console.log(obj)
+      // console.log('视频基本信息')
+      // console.log(obj)
       this.formData.meetingVideo = res.urlurl
       this.formData.url = res.urlurl
       this.formData.sizes = res.size
@@ -757,8 +757,8 @@ export default {
 
     getVoiceMessage (res) {
       let obj = res
-      console.log('图片基本信息')
-      console.log(obj)
+      // console.log('图片基本信息')
+      // console.log(obj)
       this.formData.meetingVoice = res.urlurl
       this.formData.url = res.urlurl
       this.formData.sizes = res.size

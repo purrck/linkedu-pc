@@ -53,11 +53,11 @@ const navs = {
 
     ADD_TAG: (state, to) => {
       let obj ={};
-      // console.log(to)
-      // console.log('查询遍历路由')
+      // // console.log(to)
+      // // console.log('查询遍历路由')
       let parent =  findMenuParent(to);
-      // console.log('找到路由定义的名称')
-      // console.log(parent)
+      // // console.log('找到路由定义的名称')
+      // // console.log(parent)
       obj.label = parent.label;
       obj.path = to.path;
       obj.fullPath = to.fullPath;
@@ -112,9 +112,9 @@ const navs = {
         if (ele.path === action.path) {
           state.tagList.splice(num, 1)
           if(state.activeTag.path === action.path){
-            console.log('路由相同，找下一个');
+            // console.log('路由相同，找下一个');
             let nextOne = state.tagList[num-1];
-            console.log(nextOne.path);
+            // console.log(nextOne.path);
             myVue.$router.push({path:nextOne.path})
           }
           setStore({name: 'tagList', content: state.tagList, type: ''})

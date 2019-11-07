@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`studentLeaveTotal is running...`)
+      // console.log(`studentLeaveTotal is running...`)
     }
   }
 }

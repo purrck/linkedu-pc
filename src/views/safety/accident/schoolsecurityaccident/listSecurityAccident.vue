@@ -321,7 +321,7 @@ export default {
   },
   activated() {
     //只刷新数据，不改变整体的缓存
-    console.log('重新活跃路由');
+    // console.log('重新活跃路由');
     let query = this.$route.query;
     for (let item in query) {
       this.params[item] = query[item]
@@ -376,7 +376,7 @@ export default {
       for (let key in this.searchForm) {
         this.params[key] = this.searchForm[key]
       }
-      console.log(this.searchForm);
+      // console.log(this.searchForm);
       this.isLoaded = true
       this.getList()
     },

@@ -1,174 +1,157 @@
 <template>
-  <div class="pull-height animated">
-    <!--header导航-->
-    <top class="top"></top>
-    <div v-on:mouseleave="mouseleave()">
-      <div class="flex row abstract">
-        <div class="abstract-nav" >
-          <div  class="abstract-item" v-for="(item,index) in routerTwo" :class="{is_active: activeTwo===item.label}" :key="index" v-on:mouseenter="checkThree(item,index)" @click="choeseTwo(item,index)" >
-            <span>{{item.label}}</span>
-            <ul class="last-nav" v-show="item.label===activeTwo_is">
-              <li v-for="(item,index) in routerThree" :class="{is_active: activeThree===item.label}" :key="index"  @click="choeseThree(item,index)" >
-                <span>{{item.label}}</span>
-              </li>
-            </ul>
+  <div class="pull-height ">
+    <!--top导航-->
+    <top ></top>
+
+    <!--main内容-->
+    <el-container class="main">
+      <sidebar v-show="routerThree.length" style="border-right: 1px solid #C3DBBE;"  />
+      <el-main style="padding: 0">
+        <div class="main-right animated">
+          <div class="flex row  bitch" >
+            <div   style="height: 39px;line-height: 39px; " >
+              <span v-for="(item,index) in tagList"  :key="index" class="f14 bitchItem c999999" @click="toWhere(item)"
+                    :class="[activeTag.path === item.path?'is_active':'']">{{addDesc(item)}}
+                <i class=" el-icon-circle-close" v-show="index!==0" @click.stop="deleteTags(item)"></i></span>
+            </div>
           </div>
+
+
+          <keep-alive>
+            <router-view  style="background: #fff;border-radius: 4px;"
+                         v-if="$route.meta.$keepAlive"/>
+          </keep-alive>
+          <router-view style="background: #fff;border-radius: 4px;"
+                       v-if="!$route.meta.$keepAlive"/>
         </div>
-      </div>
-      <div class="last-nav-div-rao">
-
-      </div>
-    </div>
-
-    <div style="padding: 12px 30px;color: #999999;font-size: 12px">
-      <p>当期位置：<span v-show="activeOne">{{activeOne}}</span><span v-show="activeTwo">{{' > '+activeTwo}}</span><span  v-show="activeThree">{{' > '+activeThree}}</span> </p>
-    </div>
-    <!--内容-->
-    <div class="main">
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"></router-view>
-      </keep-alive>
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
-    </div>
+      </el-main>
+    </el-container>
+    <!--main内容-->
     <!--footer-->
-    <bottom/>
+    <!-- <bottom/> -->
+    <!--footer-->
   </div>
 </template>
 
 <script>
-  import {resolveUrlPath,findArrayByValue} from "@/util/util";
+  import {resolveUrlPath, findArrayByValue} from "@/util/util";
   import top from "./top/";
-  import bottom from "./bottom/";
-  import { validatenull } from "@/util/validate";
-
+  import sidebar from "./sidebar/";
+  // import bottom from "./bottom/";
+  import {validatenull} from "@/util/validate";
   import {mapState, mapGetters} from "vuex";
+
   export default {
-    name: "container"
-    ,
-    computed: {
-      ...mapGetters(["menu", "tag",'routerOne','routerTwo', 'activeOne','routerThree','activeOne','activeTwo','activeThree','tagList'])
-    },
-    components: {
-      top,
-      bottom,
-    },
+    name: "container2",
+
     data() {
       return {
-        activeTwo_is:'',
-        whiteList : ['/login', '/404', '/401', '/lock']
+        whiteList: ['/login', '/404', '/401', '/lock'],
+        title:'',
+        activeTagss:'/safety/editSystemmessage/detail/70d95c44a3e243f5b8df9b409030f9e4',
+        radios:[
+          {title:'通知列表',path:'/safety/listMeetinginfo',id:1},
+          {title:'新增通知',path:'/safety/courseDetail/add/0',id:2},
+          {title:'编辑列表',path:'/safety/courseDetail/edit/0d8a751bc0a802f9016e4562a802cd99',id:3},
+          {title:'通知详情',path:'/safety/courseDetail/detail/0d8a751bc0a802f9016e4562a802cd97',id:4},
+        ],
       }
     },
-    created () {
-      this.activeTwo_is = this.activeTwo;
-      // this.$store.commit('SET_SCREN',e);
+    created() {
       // if (validatenull(this.menu)) {
       //   this.$store.dispatch("GetMenu").then(data => {
-      //     initMenu(this.$router,data);
+      //     // initMenu(this.$router, data);
       //   });
       // }
     },
+    computed: {
 
+      ...mapGetters(["menu", "activeTag", 'routerOne', 'routerTwo', 'activeOne', 'routerThree', 'activeOne', 'activeTwo', 'activeThree', 'tagList'])
+    },
+    components: {
+      top,
+      sidebar
+    },
     methods: {
-      //检查是否有第三级路由 随光标经过改变第三级路由
-      checkThree(item,index) {
-        this.activeTwo_is = item.label;
-        this.$store.commit("SET_ROUTHERTHREE",this.routerTwo[index].children);
-
-      },
-      addTags(to) {
-        const value = to.path
-        const label = to.name
-        if (this.whiteList.indexOf(value) === -1&&this.tag.value !== value) {
-          this.$store.commit('DEL_ALL_TAG')
-          this.$store.commit('ADD_TAG', {
-            label: label,
-            value: value,
-            query: to.query
-          })
-        }
-
-      },
-      //选择第二级路由 如果有儿子 那只是显示第三级 否则跳转到当前路由
-      choeseTwo(item,index) {
-        if(!this.routerTwo[index].children.length){
-          // this.$router.push({path:item.path});
-          this.$router.push({
-            path: resolveUrlPath(item.path, item.label),
-            query: item.query
-          })
-          this.addTags(item);
-          this.$store.commit("SET_ACTIVETWO",item.label);
-          this.$store.commit("SET_ACTIVETHREE",'');
-        }
-      },
-      mouseleave() {
-        if(this.routerThree.length>0){
-          let res = findArrayByValue('label',this.activeTwo,this.routerTwo);
-          if(res!==-1){
-            this.$store.commit("SET_ROUTHERTHREE",this.routerTwo[res].children);
-            this.activeTwo_is = this.activeTwo;
+      addDesc(res) {
+        let path = res.path
+        let params = res.params
+        if(typeof(res.label) === 'undefined') {
+          return '未定义';
+        }else{
+          if(path.indexOf('/add/')!==-1){
+            return res.label+'添加'
+          }else if(path.indexOf('/edit/')!==-1){
+            return res.label+'编辑'
+          }else if(path.indexOf('/detail/')!==-1){
+            return res.label+'详情'
+          }else if(path.indexOf('/fabu/')!==-1){
+            return res.label+'发布'
+          }else if(path.indexOf('/shenhe/')!==-1){
+            return res.label+'审核'
+          }else{
+            return res.label
           }
         }
-      },
-      choeseThree(item,index) {
-        this.$store.commit("SET_ACTIVETHREE",item.label);
-        this.$store.commit("SET_ACTIVETWO",this.activeTwo_is);
-        if(!item.children.length){
-          this.$router.push({
-            path: resolveUrlPath(item.path, item.label),
-            query: item.query
-          })
-          this.addTags(item);
 
-        }
-      }
+      },
+      toWhere(item) {
+        // alert(path);
+        // this.$store.commit('SET_TAG_TYPE', item)
+        this.$router.push({path:item.path,params:item.params,query:item.query})
+      },
+      deleteTags(item) {
+        // this.$message.error('删除标签')
+        this.$store.commit('DEL_TAG', item)
+      },
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .top {
-    padding: 10px 20px 10px 20px;
-  }
+  /*.top {*/
+  /*  padding: 10px 20px 10px 20px;*/
+  /*}*/
 
-  .last-nav-div-rao{
-      background: #F1F1F1;
-      height: 46px;
-  }
-  .last-nav{
-    font-size: 12px;
-    position: absolute;
-    width: 100vh;
-    left: 0;
-    top: 45px;
-    display: flex;
-    li{
-      /*float: left;*/
-      white-space: nowrap;
-      margin: 10px 15px;
-      padding: 0 20px ;
-      border-radius: 15px;
-      color: #757575;
-      height: 26px;
-      background: #f1f1f1;
-      line-height: 26px;
-    }
-    li:hover{
-      background: #4A9388;
-      color: #fff;
-    }
-
-    .is_active{
-      background: #4A9388;
-      color: #fff;
-    }
+  .last-nav-div-rao {
+    background: #F1F1F1;
+    height: 46px;
   }
 
   .main {
-    min-height: 500px;
-    background: #fff;
-    width: 100%;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
     box-sizing: border-box;
+    min-width: 0;
+
+    .main-right{
+      padding: 30px;
+      background: #F5F5F5;
+    }
+  }
+  .bitch {
+    margin-bottom: 30px;
+    height: 40px;
+    span:nth-child(1) {
+     border-top-left-radius:4px ;
+     border-bottom-left-radius:4px ;
+    }
+    span:last-child{
+      border-top-right-radius:4px ;
+      border-bottom-right-radius:4px ;
+    }
+    .bitchItem {
+      padding: 10px 10px;
+      background: #fff;
+      cursor:pointer
+    }
+    .is_active{
+      background: #93BF88;
+      color: #fff!important;
+    }
   }
 
 

@@ -244,8 +244,8 @@
       //图片上传
       getFileMessage(res) {
         let obj = res;
-        console.log('图片基本信息');
-        console.log(obj);
+        // console.log('图片基本信息');
+        // console.log(obj);
         // this.formData.fileName = res.urlurl.split('/')[res.urlurl.split('/').length-1];
         this.formData.filePath = res.urlurl;
         this.formData.url = res.urlurl;

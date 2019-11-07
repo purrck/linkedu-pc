@@ -174,7 +174,7 @@
 			}
 		},
 		created() {
-			console.log(this.$route.query.securityOrganizationId);
+			// console.log(this.$route.query.securityOrganizationId);
 //			this.params.securityOrganizationId=this.$route.query.securityOrganizationId
 
 
@@ -189,7 +189,7 @@
 		},
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -231,7 +231,7 @@
 			getList() {
 
 				api.fetchList(this.params).then(res => {
-//					console.log(this.params)
+//					// console.log(this.params)
 					this.data = res.data.data;
 					this.isLoaded = false;
 				}, res => {

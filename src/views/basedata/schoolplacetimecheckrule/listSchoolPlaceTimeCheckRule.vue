@@ -391,8 +391,8 @@
         });
       },
       dealCode (code) {
-        // console.log(code)
-        // console.log(this.beforeProcessCheckCodeOptions)
+        // // console.log(code)
+        // // console.log(this.beforeProcessCheckCodeOptions)
         let str = this.beforeProcessCheckCodeOptions.find(res=> {
           return res.name === code
         })

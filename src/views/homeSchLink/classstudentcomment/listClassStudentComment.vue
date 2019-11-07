@@ -243,7 +243,7 @@
 		},
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -372,7 +372,7 @@
 				this.dialogDelete = false;
 			},
 			toAdd() {
-				console.log(123)
+				// console.log(123)
 				//safety safetyEdu basedata
 				let opath = '/homeSchLink/detailClassStudentComment/add/' + 0;
 				this.$router.push({

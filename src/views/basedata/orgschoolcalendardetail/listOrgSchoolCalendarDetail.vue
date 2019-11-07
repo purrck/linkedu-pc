@@ -272,7 +272,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -371,8 +371,8 @@
 
         let firstDayWeek = this.getWeek(params['schoolYearStart'], params['month']);
         let num = this.getDaysInYearMonth(params['schoolYearStart'], params['month']);
-        // console.log(firstDayWeek)
-        // console.log(num)
+        // // console.log(firstDayWeek)
+        // // console.log(num)
 
         for(let i = 0;i < this.dates.length; i++) {
           if(i<=firstDayWeek) {
@@ -413,15 +413,15 @@
         d.setYear(year);
         d.setMonth(month - 1);
         d.setDate(1);
-        // console.log(d);
+        // // console.log(d);
         //获得周几
         // var weeks = ['周天','周1','周2','周3','周4','周5','周6'];
         var weeks = ['0', '1', '2', '3', '4', '5', '6'];
         return weeks[d.getDay()];
       },
       getDaysInYearMonth(year, month){
-        // console.log(year)
-        // console.log(month)
+        // // console.log(year)
+        // // console.log(month)
         // month = parseInt(month, 10) + 1;
         var date = new Date(year, month, 0);
         return date.getDate();

@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`entityapproveTotal is running...`)
+      // console.log(`entityapproveTotal is running...`)
     }
   }
 }

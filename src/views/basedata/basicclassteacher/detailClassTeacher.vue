@@ -536,7 +536,7 @@
 })
             },
       treeCall(event) {
-        console.log(event)
+        // console.log(event)
 
         this.formData.subjectId = event.subject.id
         this.formData.classId = event.class.id
@@ -546,7 +546,7 @@
         this.formData.gradeName = event.grade.name
       },
       jsCallback(event) {
-        console.log(event)
+        // console.log(event)
         this.formData.teacherId = event.teacherId
         this.formData.teacherName = event.userName;
       },

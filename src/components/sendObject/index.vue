@@ -88,7 +88,7 @@ export default {
   computed: {},
   watch:{
     header(val){
-      console.log(val)
+      // console.log(val)
     }
   },
   data () {
@@ -104,7 +104,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.header)
+    // console.log(this.header)
     this.init()
     this.$nextTick(() => {
     })
@@ -153,7 +153,7 @@ export default {
       // for (const tree of this.treeData) {
       //   if (tree.code === 'area' && tree.children[0].checked.length) {
       //     tree.children[0].checked.forEach(child => {
-      //       console.log(child)
+      //       // console.log(child)
       //     })
       //   }
       // }

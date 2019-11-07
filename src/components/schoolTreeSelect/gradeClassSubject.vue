@@ -131,7 +131,7 @@
                         }
                         this.msg.schoolData = res.data.data;
 
-                        console.log(a)
+                        // console.log(a)
                         let _index = 0;
                         let _b = (children) => {
                             let d = children[_index].children;

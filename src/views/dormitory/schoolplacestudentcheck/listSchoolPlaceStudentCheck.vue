@@ -965,7 +965,7 @@
         } else{
           this.option.splice(data.index,1)
         }
-        console.log(index)
+        // console.log(index)
         this.studentcancel();
       },
       //拒绝放行
@@ -1017,12 +1017,12 @@
           this.$refs.visitorPic.style.overflow="visible";
         }
         // this.$refs.visitorPic.style.overflow="hidden";
-        console.log(this.$refs.visitorPic.style.overflow)
+        // console.log(this.$refs.visitorPic.style.overflow)
         // this.$refs.visitorPic.style.display='hidden'
       },
       leave(val,index){
         this.options.splice(index,1)
-        console.log(index)
+        // console.log(index)
       },
       show(val){
         this.options.map(item=>{
@@ -1037,7 +1037,7 @@
         })
       },
       keepData(formName,deleteOne){
-        console.log(deleteOne)
+        // console.log(deleteOne)
 
         const set = this.$refs;
         set[formName].validate(valid => {
@@ -1053,8 +1053,8 @@
                       this.option.splice(deleteOne.index,1)
                     }
                   }
-                  console.log(deleteOne.visitorName)
-                  console.log(deleteOne.index)
+                  // console.log(deleteOne.visitorName)
+                  // console.log(deleteOne.index)
 
                 } else {
                   this.$message.error(res.data.message);
@@ -1065,7 +1065,7 @@
               if (this.insiteVisitor.sex === '女'){this.insiteVisitor.sex = 'F' }
               this.insiteVisitor.visitedDt = new Date(+new Date() + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
               // this.insiteVisitor.isParent='N'
-              console.log(this.insiteVisitor.visitedDt)
+              // console.log(this.insiteVisitor.visitedDt)
               api.addVisitor(this.insiteVisitor).then(res => {
                 if (res.data.resultCode === "000000") {
                   this.$message.success("添加成功");
@@ -1073,11 +1073,11 @@
                   for (let i=0;i<this.option.length;i++){
                     if (this.option[i].id === deleteOne.cardNum) {
                       this.option.splice(deleteOne.index,1)
-                      // console.log(deleteOne.visitorName)
+                      // // console.log(deleteOne.visitorName)
                     }
                   }
-                  console.log(deleteOne.visitorName)
-                  console.log(deleteOne.index)
+                  // console.log(deleteOne.visitorName)
+                  // console.log(deleteOne.index)
 
                 } else {
                   this.$message.error(res.data.message);
@@ -1117,7 +1117,7 @@
         // setInterval(function () {
         //    this.showTimes = new Date(+new Date() + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
         //   document.getElementById("times").innerHTML = this.showTimes
-        //   // console.log(document.getElementById("times").innerHTML)
+        //   // // console.log(document.getElementById("times").innerHTML)
         // },1000)
       },
       addChapter () {
@@ -1141,7 +1141,7 @@
               }
             }
           })
-          console.log(res.data.data.records.length)
+          // console.log(res.data.data.records.length)
 
           this.isLoaded = false;
         }, res => {

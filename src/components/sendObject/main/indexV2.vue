@@ -200,7 +200,6 @@ export default {
           checkboxGroup : []
         })
       }
-      console.log(this.pageList)
 
       this.pageList[0].menu = [
         {
@@ -223,7 +222,7 @@ export default {
       this.menu = this.pageList[0].menu
       this.openData(this.menu[0].url,0)
 
-      console.log(this.pageList)
+      // console.log(this.pageList)
 
 
       for(let i=1; i<this.treeData.length; i++){
@@ -263,14 +262,14 @@ export default {
           })
       this.handleClick(this.targetData.list[0],0)
       /*commonApi.getUserType().then(res => {
-        console.log(res)
+        // console.log(res)
         this.sectionData = res.data.data
       })*/
       this.initData()
     },
     openData(url,index){
-      console.log(this.indexV2,index)
-      console.log(this.checkedList)
+      // console.log(this.indexV2,index)
+      // console.log(this.checkedList)
       
       getTypeBy(url,{}).then(res => {
         
@@ -288,11 +287,11 @@ export default {
         
         this.menuIndex = index;
         //this.pageList[this.indexV2].menu[this.menuIndex].selectList = [];
-        console.log(this.pageList)
+        // console.log(this.pageList)
       })
     },
     handleSectionClick(event){
-      console.log(event)
+      // console.log(event)
       //this.pageList[this.indexV2].menu[this.menuIndex].selectList =  event
       
       /*let b = [];
@@ -303,8 +302,8 @@ export default {
       })*/
     },
     checkboxClick(event,item){
-      //console.log(item)
-      console.log(event)
+      //// console.log(item)
+      // console.log(event)
       if(event){
         this.pageList[this.indexV2].menu[this.menuIndex].nextData.push(item);
       }
@@ -314,7 +313,7 @@ export default {
         })
       }
 
-      console.log(this.pageList)
+      // console.log(this.pageList)
       
     },
 
@@ -328,9 +327,9 @@ export default {
       this.treeData[this.index].isCurrent = true
     },
     handleClick (data, index) {
-      console.log(data)
+      // console.log(data)
       getTypeBy(data.url,{}).then(res => {
-        console.log(this.index)
+        // console.log(this.index)
         if(res.data.resultCode == "100000"){
           this.pageState = "error"
           this.pageInfo = res.data.message
@@ -370,7 +369,7 @@ export default {
       this.isIndeterminate = false
     },
     checkboxChange(event,data){
-      console.log(data)
+      // console.log(data)
 
       if(data.type == "role"){
         return ;
@@ -395,7 +394,7 @@ export default {
             selectList : []
           })
         }
-      console.log(this.menuData[this.index])
+      // console.log(this.menuData[this.index])
     },
     setCall(){
       if(this.index == 0 && this.curIndex == 0){
@@ -412,7 +411,7 @@ export default {
       }
     },
     convertData () {
-      console.log(this.menuData)
+      // console.log(this.menuData)
       let _a = {
         role : [],
         segment : [],
@@ -440,8 +439,8 @@ export default {
         })
 
       });
-      console.log(_a)
-      console.log(this.callbackData)
+      // console.log(_a)
+      // console.log(this.callbackData)
       this.$emit('callback', _a)
     },
     next () {
@@ -501,7 +500,7 @@ export default {
       }
       this.indexV2--
       this.menu = []
-      console.log(this.pageList)
+      // console.log(this.pageList)
       this.pageList[this.indexV2].menu.map(item => {
         this.menu = this.menu.concat(item.selectData)
       })

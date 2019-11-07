@@ -293,7 +293,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -427,7 +427,7 @@
       },
       toEdit(id) {
         let opath = '/safetyEdu/editSurveyMasterOp/' + id
-        console.log(opath)
+        // console.log(opath)
         this.$router.push({path: opath, query: {id}})
       },
       toDetail(id) {
@@ -440,7 +440,7 @@
       },
       dialogDisabledHandle() {
         api.disabled(this.multipleSelection).then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.data.resultCode === '000000') {
             this.getList()
             this.dialogTingyong = false

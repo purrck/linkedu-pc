@@ -19,12 +19,12 @@ export default {
       return state.subjectData
     },
     getGradeAndSubject(state) {
-      console.log(state)
-      console.log(state.gradeData)
-      console.log(state.gradeData[0])
+      // console.log(state)
+      // console.log(state.gradeData)
+      // console.log(state.gradeData[0])
       // state.gradeData[0].children.map((item,index) => {
       //     item.sementSubject = [];
-      //     console.log(state.subjectData[0].children)
+      //     // console.log(state.subjectData[0].children)
       //     state.subjectData[0].children.map(item1 => {
       //         item.sementSubject.push({
       //             subjectName : item1.name,
@@ -58,12 +58,12 @@ export default {
       state.gradeData = played;
     },
     SET_SEGMENT_SUBJECT(state, played) {
-      console.log(played)
+      // console.log(played)
       state.subjectData = played;
     },
     SET_SEGMENT_NAME_ID(state, played) {
 
-      console.log(played)
+      // console.log(played)
       state.segment.name = played.name;
       state.segment.id = played.id;
     }

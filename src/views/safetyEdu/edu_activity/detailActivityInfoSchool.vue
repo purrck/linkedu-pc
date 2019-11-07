@@ -766,7 +766,7 @@
         // 通过选择器获取img元素
         // qrCode.toCanvas()
         var img = document.querySelector(selector).getElementsByTagName("img")[0]
-        console.log(document.querySelector(selector).getElementsByTagName("img"));
+        // console.log(document.querySelector(selector).getElementsByTagName("img"));
         // 将图片的src属性作为URL地址
         var url = img.src
         var a = document.createElement('a')
@@ -777,7 +777,7 @@
         a.dispatchEvent(event)
       },
       activityClick(item) {
-        console.log(item);
+        // console.log(item);
         document.getElementById("activityPage").innerHTML = ""
         let b = "http://192.168.2.60:8099";
 
@@ -1087,7 +1087,7 @@
         }
       },
       finish(data){
-        console.log(data)
+        // console.log(data)
         this.isFinish = true;
         this.$message.success("选择成功");
         //this.formData["scope"] = JSON.stringify(data);

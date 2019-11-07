@@ -445,7 +445,7 @@
       },
 
       organizationAddressGpsPoint(type) {
-        console.log('触发了点击')
+        // console.log('触发了点击')
         let currPoint = type.point;
         this.lat = currPoint.lat;
         this.lng = currPoint.lng;
@@ -456,7 +456,7 @@
       getLocaltionMsg (geoc, point) {
         let _this = this
         geoc.getLocation(point, function (rs) {
-          console.log(rs);
+          // console.log(rs);
           let address = rs.address;
           _this.address = address
         })

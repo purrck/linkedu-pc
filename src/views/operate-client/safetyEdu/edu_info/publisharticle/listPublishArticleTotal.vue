@@ -32,7 +32,7 @@ export default {
 
   methods: {
     init () {
-      console.log(`listPublishArticleTotalV2 is running...`)
+      // console.log(`listPublishArticleTotalV2 is running...`)
     }
   }
 }

@@ -367,7 +367,7 @@
       this.formData.dormitoryId=this.$route.params.id
       this.formData.dormitoryNum=this.$route.query.dormitoryNum
       this.formData.dormitoryName=this.$route.query.dormitoryName
-      // console.log(this.$route)
+      // // console.log(this.$route)
       this.getDetail(this.$route.params.id);
           commonApi.getCodeIntType("dormitoryTeacherDuty").then(res => {
             let viewList = res.data.data || [];
@@ -390,7 +390,7 @@
     },
     methods: {
       jsCallback(event) {
-        console.log(event)
+        // console.log(event)
         this.formData.teacherId = event.teacherId
         this.formData.teacherName = event.userName;
       },

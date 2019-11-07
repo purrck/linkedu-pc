@@ -409,7 +409,7 @@ export default {
   },
   methods: {
     test(e) {
-      console.log(e)
+      // console.log(e)
       this.$router.push(e)
     },
     submit (formName) {

@@ -159,7 +159,7 @@
             }
           }
         }).then(action => {
-          console.log(action)
+          // console.log(action)
           this.$message({
             type: 'info',
             message: 'action: ' + action
@@ -177,8 +177,8 @@
       },
       submitForm(formName) {
         const set = this.$refs
-        console.log(this.form)
-        console.log(this.form.booleanPass)
+        // console.log(this.form)
+        // console.log(this.form.booleanPass)
         set[formName].validate((valid) => {
           if (valid) {
             this.loading = true;

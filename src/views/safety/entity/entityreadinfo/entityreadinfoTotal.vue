@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`entityreadinfoTotal is running...`)
+      // console.log(`entityreadinfoTotal is running...`)
     }
   }
 }

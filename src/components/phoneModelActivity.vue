@@ -46,7 +46,6 @@ export default {
   },
   methods: {
     init () {
-      console.log(`phoneModel is running...`)
     }
   }
 }

@@ -1,4 +1,4 @@
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 const _import = require('./_import')
 //safety
 const model = 'safety'

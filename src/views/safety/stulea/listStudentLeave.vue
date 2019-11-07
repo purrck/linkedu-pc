@@ -248,7 +248,7 @@
           return time.getTime() > str2Time(start);
         }
       }
-      // console.log(Date.now())
+      // // console.log(Date.now())
 
     },
     mounted() {
@@ -258,7 +258,7 @@
       commonApi.getCodeIntType("studentLeaveStatus").then(res => {
         let viewList = res.data.data || [];
         for (let studentLeaveStatusItem of viewList) {
-          // console.log(studentLeaveStatusItem);
+          // // console.log(studentLeaveStatusItem);
           //此处产品说去掉编辑中状态筛选
           if (studentLeaveStatusItem.codeDesc !== "编辑中") {
             this.studentLeaveStatusCodeOptions.push({
@@ -295,7 +295,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -350,7 +350,7 @@
           this.params[key] = this.searchForm[key]
         }
         this.isLoaded = true;
-        console.log(this.searchForm.studentLeaveTypeCode+'++++++++++++++++++++++++++++++')
+        // console.log(this.searchForm.studentLeaveTypeCode+'++++++++++++++++++++++++++++++')
         this.getList();
       },
 

@@ -633,8 +633,8 @@
       },
       getFileMessage(res) {
         let obj = res;
-        //console.log('File基本信息');
-        //console.log(obj);
+        //// console.log('File基本信息');
+        //// console.log(obj);
         this.formData.filePath = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;
@@ -662,8 +662,8 @@
       },
       getVideoMessage(res) {
         let obj = res;
-        console.log('Video基本信息');
-        //console.log(obj);
+        // console.log('Video基本信息');
+        //// console.log(obj);
         this.formData.meetingVideo = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;
@@ -671,8 +671,8 @@
       },
       getVoiceMessage(res) {
         let obj = res;
-        console.log('Voice基本信息');
-        //console.log(obj);
+        // console.log('Voice基本信息');
+        //// console.log(obj);
         this.formData.meetingVoice = res.urlurl;
         this.formData.url = res.urlurl;
         this.formData.sizes = res.size;

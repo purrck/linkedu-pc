@@ -323,8 +323,8 @@
         resData[2].children.forEach(res => {
           claTem = claTem.concat(res.checked);
         });
-        console.log('claTem');
-        console.log(claTem);
+        // console.log('claTem');
+        // console.log(claTem);
         this.formData.classIds = claTem;
       },
       next(formName) {
@@ -469,7 +469,7 @@
         })
       },
       typeChange(entityId) {
-        console.log(arguments);
+        // console.log(arguments);
         api.getObjSur(entityId).then(res => {
           this.surDetail = res.data.data;
         })

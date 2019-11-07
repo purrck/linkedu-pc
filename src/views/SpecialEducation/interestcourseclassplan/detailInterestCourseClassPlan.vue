@@ -779,7 +779,7 @@
     created() {
       this.getPalce();
       // commonApi.getCodeIntType("classStudentStatus").then(res => {
-      //   console.log(res.data.data)
+      //   // console.log(res.data.data)
       //   let viewList = res.data.data || [];
       //   for (let ynItem of viewList) {
       //     this.ynOptions.push({
@@ -804,7 +804,7 @@
       this.studentMessage.interestCourseClassName = query.interestCourseClassName;//兴趣班名
       this.formData.interestCourseClassName = query.interestCourseClassName;//兴趣班名
       this.studentMessage.planId = this.$route.params.id;  //计划id
-      // console.log(this.$route)
+      // // console.log(this.$route)
       this.getInterestCourseClassSections()
       this.getList();
 
@@ -814,7 +814,7 @@
     methods: {
 
       getPlaceNames() {
-        // console.log(this.childrenPlaceId)
+        // // console.log(this.childrenPlaceId)
         if (this.childrenPlaceId.length === 1) {   //选择主场所
           let placeId = this.childrenPlaceId[0]
           for (let i = 0; i < this.palceTableDataList.length; i++) {
@@ -845,7 +845,7 @@
         this.place.schoolId = userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
         api.getPlaceList(this.place).then(res => {
           let palceList = res.data.data
-          console.log(palceList)
+          // console.log(palceList)
 
           for (let i = 0; i < palceList.length; i++) {
             let num = 1
@@ -875,13 +875,13 @@
               // }
             }
           }
-          console.log(this.palceTableDataList)
+          // console.log(this.palceTableDataList)
         })
       },
 
 
       getWeekNum() {
-        // console.log(this.isDetailPage)
+        // // console.log(this.isDetailPage)
         for (let i = 0; i < this.weekOptions.length; i++) {
           if (this.formData.weekNum == this.weekOptions[i].weekNum) {
             this.formData.weekNum = this.weekOptions[i].label
@@ -890,12 +890,12 @@
 
         this.getDay()
         this.getWeek()
-        // console.log(typeof this.formData.weekNum)
-        // console.log(typeof this.weekOptions[1].weekNum)
+        // // console.log(typeof this.formData.weekNum)
+        // // console.log(typeof this.weekOptions[1].weekNum)
       },
       getsetion(val) {
-        // console.log(val);
-        // console.log(this.formData.getSetions)
+        // // console.log(val);
+        // // console.log(this.formData.getSetions)
         // var beginTimeArr = []
         // var endTimeArr = []
         this.setion = []
@@ -906,15 +906,15 @@
             }
           }
         }
-        // console.log(this.setion[0].beginTime)
-        // console.log(this.setion[1].beginTime)
+        // // console.log(this.setion[0].beginTime)
+        // // console.log(this.setion[1].beginTime)
         // this.formData.getSetions = [beginTimeArr[0],endTimeArr[endTimeArr.length - 1]];
         // this.formData.beginTime = beginTimeArr[0]
         // this.formData.endTime = endTimeArr[endTimeArr.length - 1]
-        // console.log(this.formData)
+        // // console.log(this.formData)
       },
       getsetions() {
-        // console.log(this.formData.beginTime)
+        // // console.log(this.formData.beginTime)
         // var beginTimeArr = []
         // var endTimeArr = []
         for (let i = 0; i < this.sections.length; i++) {
@@ -929,24 +929,24 @@
           //   }
           // }
         }
-        // console.log(this.formData)
+        // // console.log(this.formData)
         // this.formData.getSetions = [beginTimeArr[0],endTimeArr[endTimeArr.length - 1]];
       },
       getInterestCourseClassSections() {
-        // console.log(this.getInterestCourseClassSection)
+        // // console.log(this.getInterestCourseClassSection)
         api.getInterestCourseClassSections(this.getInterestCourseClassSection).then(res => {
-          // console.log(this.formData.endTime)
+          // // console.log(this.formData.endTime)
           if (res.data.resultCode !== "000000") {
             this.$message.error(res.data.message);
           } else {
-            console.log(validatenull(res.data.data))
+            // console.log(validatenull(res.data.data))
             this.sections = validatenull(res.data.data) ? [] : res.data.data;
             if (!this.sections.length) {
               this.$message('学校未曾安排兴趣班的作息')
               return
             }
             this.sections.map(item => {
-              // console.log(item)
+              // // console.log(item)
               if (this.formData.endTime === item.endTime) {
                 // this.formData.beginTime=item.beginTime
                 this.setionList = [
@@ -959,9 +959,9 @@
       },
 
       getDay() {
-        console.log(typeof this.formData.planedDt)
-        console.log(this.formData.planedDt)
-        // console.log(this.formData.weekNum)
+        // console.log(typeof this.formData.planedDt)
+        // console.log(this.formData.planedDt)
+        // // console.log(this.formData.weekNum)
 
         if (this.formData.planedDt !== undefined) {
           if (this.formData.planedDt !== null) {
@@ -993,13 +993,13 @@
 
 
       studentArrive() {
-        // console.log(this.arr)
-        console.log(this.studentMessage.classStudentId.length)
+        // // console.log(this.arr)
+        // console.log(this.studentMessage.classStudentId.length)
         if (this.studentMessage.classStudentId.length > 0) {
           this.chapterVisible = false;
           this.studentMessage.isCheckException = 'Y'
           api.studentArrive(this.studentMessage).then(res => {
-            // console.log(this.studentMessage)
+            // // console.log(this.studentMessage)
             if (res.data.resultCode !== "000000") {
               this.$message.error(res.data.message);
             } else {
@@ -1032,7 +1032,7 @@
       },
 
       studentNoArrive() {
-        console.log(this.studentMessage.classStudentId)
+        // console.log(this.studentMessage.classStudentId)
         if (this.studentMessage.classStudentId.length > 0) {
           this.chapterVisible = false;
           this.laterReason = true;
@@ -1051,7 +1051,7 @@
         this.place.schoolId = userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
         api.getList(this.getstudentMessage).then(res => {
           this.tableData = res.data.data.records
-          console.log(res.data.data.records)
+          // console.log(res.data.data.records)
           if (res.data.resultCode !== "000000") {
             this.$message.error(res.data.message);
           } else {
@@ -1064,7 +1064,7 @@
 
         // api.getPlaceList(this.place).then(res => {
         //   this.palceTableData = res.data.data
-        //   // console.log(this.palceTableData)
+        //   // // console.log(this.palceTableData)
         //   for (let i = 0; i < this.palceTableData.length; i++) {
         //     this.palceTableDataList.push({
         //       index:i,
@@ -1073,7 +1073,7 @@
         //       children: [],
         //     });
         //   }
-        //   console.log(this.palceTableData)
+        //   // console.log(this.palceTableData)
         //   if (res.data.resultCode !== "000000") {
         //     this.$message.error(res.data.message);
         //   }
@@ -1083,20 +1083,20 @@
       },
 
       handleSelectionChange(item) {
-        console.log(item)
+        // console.log(item)
         var fileArray = [];
         this.studentMessage.classStudentId = [];
         for (let i = 0; i < item.length; i++) {
           fileArray.push(item[i].classStudentId);
         }
         this.studentMessage.classStudentId = fileArray;
-        console.log(this.studentMessage.studentIds)
-        console.log(fileArray)
+        // console.log(this.studentMessage.studentIds)
+        // console.log(fileArray)
       },
 
       SelectionChange() {
         this.noArrive = item
-        console.log(this.noArrive)
+        // console.log(this.noArrive)
       },
 
 
@@ -1147,7 +1147,7 @@
                 formDatas.push(item)
               }
             }
-            // console.log(formDatas);
+            // // console.log(formDatas);
 
             // this.formData.setions=this.setion
             api.addObj(formDatas).then(res => {
@@ -1181,7 +1181,7 @@
                     if (placeId === this.palceTableDataList[i].children[j].placeId) {
                       this.childrenPlaceId.push(this.palceTableDataList[i].placeId)
                       this.childrenPlaceId.push(this.palceTableDataList[i].children[j].placeId)
-                      // console.log(this.childrenPlaceId)
+                      // // console.log(this.childrenPlaceId)
                       break
                     }
                   }
@@ -1201,11 +1201,11 @@
         this.place.schoolId = userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
         api.getPlaceList(this.place).then(res => {
           this.allPlace = res.data.data
-          console.log(this.allPlace)
+          // console.log(this.allPlace)
           for (let i = 0; i < this.allPlace.length; i++) {
             this.allPlaces.push({placeName: this.allPlace[i].placeName, placeId: this.allPlace[i].placeId});
           }
-          // console.log(this.palceTableData)
+          // // console.log(this.palceTableData)
           if (res.data.resultCode !== "000000") {
             this.$message.error(res.data.message);
           }

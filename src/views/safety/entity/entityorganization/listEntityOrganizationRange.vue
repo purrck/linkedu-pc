@@ -212,7 +212,7 @@ export default {
 
   activated() {
     //只刷新数据，不改变整体的缓存
-    console.log('重新活跃路由');
+    // console.log('重新活跃路由');
     let query = this.$route.query;
     for (let item in query) {
       this.params[item] = query[item]
@@ -221,7 +221,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`entityOrganizationRange is running...`)
+      // console.log(`entityOrganizationRange is running...`)
       bulletinUserRuleAdSchoolInfoWithOutSegment().then(res => {
         res.data.data.children.map(item => {
           item.chekedList = []
@@ -261,7 +261,7 @@ export default {
     getList () {
       const that = this
       api.getRangeList(that.params).then(res => {
-        console.log(res)
+        // console.log(res)
         that.data = res.data.data
         that.isLoaded = false
       }, res => {
@@ -381,7 +381,7 @@ export default {
       })
       obj.organizationUserRules.push(subObj)
 
-      console.log(obj)
+      // console.log(obj)
       api.addClassList(obj).then(res => {
         this.activeTab = 'second'
         this.getList()

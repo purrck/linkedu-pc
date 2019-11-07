@@ -380,7 +380,7 @@
         /*document.getElementById("coursePage").innerHTML = `<iframe  width="100%" height="667" scrolling="no" frameborder="0"
                           :src="http://www.baidu.com"></iframe>`*/
         //this.url = `http://www.baidu.com?courseId=${item.entityId}`
-        console.log(item)
+        // console.log(item)
       },
 
       viewGuankan(){
@@ -519,7 +519,7 @@
             this.SET_IS_LOADING(true);
             this.formData.entityOrgStatusCode = "editing";
             this.formData.entityType = "courseinfo"
-            console.log(this.formData)
+            // console.log(this.formData)
             api.entityOrganizationAdAdd(this.formData).then(res => {
               if (res.data.resultCode === '000000') {
                 this.$message.success("保存成功");
@@ -646,8 +646,8 @@
         resData[2].children.forEach(res => {
           claTem = claTem.concat(res.checked);
         });
-        console.log('claTem');
-        console.log(claTem);
+        // console.log('claTem');
+        // console.log(claTem);
         this.formData.classIds = claTem;
       }
     }

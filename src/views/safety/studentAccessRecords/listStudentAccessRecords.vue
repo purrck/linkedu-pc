@@ -374,7 +374,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -399,7 +399,7 @@
       },
 
       getPlaceNames() {
-        // console.log(this.childrenPlaceId)
+        // // console.log(this.childrenPlaceId)
         if (this.childrenPlaceId.length === 1) {   //选择主场所
           let placeId = this.childrenPlaceId[0]
           for (let i = 0; i < this.palceTableDataList.length; i++) {
@@ -429,7 +429,7 @@
         api.getPlaceList(this.place).then(res => {
           let palceList = res.data.data
           this.hasChildrenPlace = res.data.data
-          // console.log(this.palceTableDataList);
+          // // console.log(this.palceTableDataList);
           // this.palceTableData=res.data.data
           for (let i = 0; i < palceList.length; i++) {
             let num = 1
@@ -484,7 +484,7 @@
         // setInterval(function () {
         //   let showTimes = new Date(+new Date() + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
         //   document.getElementById("times").innerHTML = showTimes
-        //   // console.log(document.getElementById("times").innerHTML)
+        //   // // console.log(document.getElementById("times").innerHTML)
         // },1000)
       },
       addChapter() {
@@ -528,7 +528,7 @@
         api.fetchList(this.params).then(res => {
           this.data = res.data.data;
           // this.data.records.push({studentName:"1313"})
-          // console.log(this.data)
+          // // console.log(this.data)
           this.isLoaded = false;
         }, res => {
           this.$message.error(res.message);

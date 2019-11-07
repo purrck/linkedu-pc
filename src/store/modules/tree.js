@@ -26,7 +26,7 @@ export  default {
     mutations : {
         getTree(state,played){
             state.all = played;
-            console.log(played)
+            // console.log(played)
         }
     },
     actions : {

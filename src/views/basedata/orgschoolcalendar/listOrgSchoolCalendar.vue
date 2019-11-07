@@ -310,7 +310,7 @@ export default {
   },
   activated() {
     //只刷新数据，不改变整体的缓存
-    console.log('重新活跃路由');
+    // console.log('重新活跃路由');
     let query = this.$route.query;
     for (let item in query) {
       this.params[item] = query[item]
@@ -322,11 +322,11 @@ export default {
     //this.params.schoolId = schoolId;
 
     commonApi.commonRequest('/userapp/base/segmentGrade?type=1','get',).then(res => {
-      console.log(res)
+      // console.log(res)
       this.optionsList2 = coverData(res.data.data, 'name', 'id')
     })
     commonApi.commonRequest('/userapp/base/segmentGrade?type=2','get',{id:this.params.segmentId}).then(res => {
-      console.log(res)
+      // console.log(res)
       this.optionsList3 = coverData(res.data.data, 'name', 'id')
     })
 
@@ -374,7 +374,7 @@ export default {
   methods: {
     getTerm () {
       api.getTerm().then(res => {
-        // console.log(res)
+        // // console.log(res)
         this.term=res.data.data;
         this.isLoaded = false
       }, res => {

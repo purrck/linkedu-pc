@@ -312,7 +312,7 @@ import { mapGetters } from 'vuex';
         this.isLoaded = true;
         this.formData.schoolOrgId=this.schoolInfo.schoolOrgId;
         this.formData.schoolOrgName=this.schoolInfo.schoolOrgName;
-        console.log(this.formData)
+        // console.log(this.formData)
         set[formName].validate(valid => {
           if (this.pageState === "edit" && valid) {
             this.formLoading = true;

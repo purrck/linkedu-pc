@@ -438,7 +438,7 @@
       this.getPalce();
       let userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
       this.formData.schoolId = userInfo.content.extValues.schoolOrg.schoolOrgId   //学校id
-      console.log(this.formData.schoolId)
+      // console.log(this.formData.schoolId)
       commonApi.getCodeIntType("dormitoryType").then(res => {
         let viewList = res.data.data || [];
         for (let classStudentStatusItem of viewList) {
@@ -479,7 +479,7 @@
         api.getPlaceList(this.place).then(res => {
           let palceList = res.data.data
           this.hasChildrenPlace = res.data.data
-          // console.log(this.palceTableDataList);
+          // // console.log(this.palceTableDataList);
           // this.palceTableData=res.data.data
           for (let i=0;i<palceList.length;i++){
             let num =1
@@ -503,7 +503,7 @@
         this.getDetail(this.$route.params.id)
       },
       getPlaceNames() {
-        console.log(this.childrenPlaceId)
+        // console.log(this.childrenPlaceId)
         if (this.childrenPlaceId.length===1){   //选择主场所
           let placeId=this.childrenPlaceId[0]
           for (let i=0;i<this.palceTableDataList.length;i++){
@@ -515,16 +515,16 @@
           }
         } else {
           let placeId=this.childrenPlaceId[1]
-          // console.log(this.palceTableDataList)
+          // // console.log(this.palceTableDataList)
           for (let i=0;i<this.palceTableDataList.length;i++){
-            // console.log(this.palceTableDataList[i].children)
+            // // console.log(this.palceTableDataList[i].children)
             if (this.palceTableDataList[i].children !==undefined ) {
               for (let j = 0; j < this.palceTableDataList[i].children.length; j++) {
                 if (placeId === this.palceTableDataList[i].children[j].placeId) {
                   this.formData.placeName = this.palceTableDataList[i].children[j].placeName
                   this.formData.placeId = this.palceTableDataList[i].children[j].placeId
-                  // console.log(this.formData.placeId)
-                  // console.log(this.formData.placeName)
+                  // // console.log(this.formData.placeId)
+                  // // console.log(this.formData.placeName)
                   break
                 }
               }
@@ -539,8 +539,8 @@
             this.formData.placeName = item.placeName
           }
         })
-        // console.log(this.formData.placeName);
-        // console.log(this.formData.placeId);
+        // // console.log(this.formData.placeName);
+        // // console.log(this.formData.placeId);
       },
 
       submit(formName) {
@@ -577,12 +577,12 @@
       },
       // getPlaceId(id) {
       //   let mainName = null;
-      //   console.log(this.palceTableDataList)
-      //   console.log(this.palceTableDataList.length)
+      //   // console.log(this.palceTableDataList)
+      //   // console.log(this.palceTableDataList.length)
       //   this.palceTableDataList.map(item => {
       //     if (item.placeId === id) {
       //       mainName = item.placeName
-      //       console.log(mainName)
+      //       // console.log(mainName)
       //     }
       //   })
       //
@@ -593,7 +593,7 @@
       //     this.palceTableChildrenData = []
       //     for (let i = 0; i < this.palceTableDataList.length; i++) {
       //       if (this.palceTableDataList[i].children.length <= 0) {
-      //         // console.log(this.palceTableDataList[i].children.length)
+      //         // // console.log(this.palceTableDataList[i].children.length)
       //         if (this.palceTableDataList[i].placeId === id) {
       //           // this.formData.placeName = this.palceTableDataList[i].placeName
       //           api.fetchListsss(this.place).then(res => {
@@ -601,7 +601,7 @@
       //             this.palceTableDataList[i].children = this.palceTableChildrenData
       //             this.palceTableDataList[i].children.unshift({placeId: id, placeName: mainName})
       //
-      //             console.log(this.palceTableDataList[i].children)
+      //             // console.log(this.palceTableDataList[i].children)
       //           }, res => {
       //             this.$message.error(res.message);
       //           });
@@ -612,16 +612,16 @@
       // },
 
       getDetail(paramsId) {
-        console.log(33333333);
+        // console.log(33333333);
         if (this.pageState !== 'add') {
           api.getObj(paramsId).then(res => {
             if (res.data.resultCode === "000000") {
               this.formData = res.data.data
-console.log(this.formData.placeId)
+// console.log(this.formData.placeId)
               // this.mianpArrlaceId = this.formData.placeId.split('-')[0]
               // this.getPlaceId(this.mianpArrlaceId);
-              // console.log(this.palceTableDataList)
-              // console.log(this.palceTableDataList.length)
+              // // console.log(this.palceTableDataList)
+              // // console.log(this.palceTableDataList.length)
               // this.selectedOptions.push(this.formData.placeId.split('-')[0])
               // this.selectedOptions.push(this.formData.placeId.split('-')[1])
 
@@ -631,15 +631,15 @@ console.log(this.formData.placeId)
               let placeId=this.formData.placeId
               this.childrenPlaceId=[]
 
-              console.log(this.hasChildrenPlace)
+              // console.log(this.hasChildrenPlace)
               for (let i=0;i<this.hasChildrenPlace.length;i++){
                 if (this.hasChildrenPlace[i].children.length>0){
-                  console.log(this.hasChildrenPlace[i])
+                  // console.log(this.hasChildrenPlace[i])
                   for (let j=0;j<this.hasChildrenPlace[i].children.length;j++){
                     if (placeId === this.hasChildrenPlace[i].children[j].placeId){
                       this.childrenPlaceId.push(this.hasChildrenPlace[i].placeId)
                       this.childrenPlaceId.push(this.hasChildrenPlace[i].children[j].placeId)
-                      // console.log(this.childrenPlaceId)
+                      // // console.log(this.childrenPlaceId)
                       break
                     }
                   }
@@ -650,7 +650,7 @@ console.log(this.formData.placeId)
                   }
                 }
               }
-console.log(this.childrenPlaceId)
+// console.log(this.childrenPlaceId)
 
 
 

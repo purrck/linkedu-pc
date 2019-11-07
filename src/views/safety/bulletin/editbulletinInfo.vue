@@ -325,7 +325,7 @@
           message: content,
           type: 'success'
         });
-        console.log(content)
+        // console.log(content)
       },
       handlerReview(){
         //let content = this.$refs.ue.getUEContent();
@@ -333,7 +333,7 @@
         var storage=window.localStorage;
             storage.setItem("reviewContent",content);
         //this.review.visible = true;
-        console.log(this.form1)
+        // console.log(this.form1)
         this.$router.push({ path: `/safety/preview` , query : this.form1 })
 
       },
@@ -355,7 +355,7 @@
           /*getObj(id).then(response => {
             this.form = response.data.data
             this.dealVO(this.form.bulletinUserRuleListVO)
-            console.log(response.data.data)
+            // console.log(response.data.data)
           }).then(() => {
             if (this.form.bulletinUserRuleListVO.segmentIdList.length) {
               getGrade(this.form.bulletinUserRuleListVO.segmentIdList).then(res => {
@@ -381,7 +381,7 @@
             this.form = res.data.data
             this.form.bulletinUserRuleListVO = this.bulletinUserRuleListVO
             this.form.bulletinId = ''
-            console.log(res.data.data)
+            // console.log(res.data.data)
           })
         }
       },
@@ -489,7 +489,7 @@
       commit(formName) {
         const that = this
         const set = that.$refs
-        console.log(this.form)
+        // console.log(this.form)
       // set[formName].validate(valid => {
         if (1) {
           commitCheck(this.form).then(() => {

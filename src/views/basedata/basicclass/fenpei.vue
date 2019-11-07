@@ -88,7 +88,7 @@
         },
         created(){
             this.classList = JSON.parse(decodeURIComponent(this.$route.query.classList));
-            console.log(this.classList)
+            // console.log(this.classList)
             this.SET_IS_LOADING(true);
             api.getTeacher().then(res => {
               this.SET_IS_LOADING(false);
@@ -133,7 +133,7 @@
                   this.createLoading = false;
               })
 
-              console.log(this.classTeacherList)
+              // console.log(this.classTeacherList)
             },
             classFilter(){
               return this.classList.filter(item => {

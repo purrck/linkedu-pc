@@ -253,7 +253,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -300,7 +300,7 @@
           for (let item in arr) {
             arr[item].newsScan = `warehousing&${arr[item].schoolPoductDailyId}`
           }
-          console.log(arr)
+          // console.log(arr)
           this.isLoaded = false;
         }, res => {
           this.$message.error(res.message);

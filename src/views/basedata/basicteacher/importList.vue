@@ -166,10 +166,10 @@
             }
         },
         mounted() {
-            console.log('data');
-            console.log(this.$route.query.data);
-            console.log(this.$route.query.data.data.failDownloadUrl);
-            console.log(this.allList)
+            // console.log('data');
+            // console.log(this.$route.query.data);
+            // console.log(this.$route.query.data.data.failDownloadUrl);
+            // console.log(this.allList)
         },
         methods : {
             failHandler(){
@@ -184,7 +184,7 @@
                 this.isLoaded = true;
             },
             importCallback(data){
-                console.log(data);
+                // console.log(data);
                 this.isLoaded = false;
             }
         }

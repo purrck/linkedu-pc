@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`bulletinTotal is running...`)
+      // console.log(`bulletinTotal is running...`)
     }
   }
 }

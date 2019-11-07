@@ -87,7 +87,7 @@
                   return
               }
               this.getSementGrade = res.data.data.children
-              console.log(2343)
+              // console.log(2343)
                 this.SET_IS_LOADING(false)
             })
 

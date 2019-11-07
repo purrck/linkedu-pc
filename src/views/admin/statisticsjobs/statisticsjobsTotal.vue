@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`statisticsjobsTotal is running...`)
+      // console.log(`statisticsjobsTotal is running...`)
     },
     changeDay (e) {
       this.dateRange = ''

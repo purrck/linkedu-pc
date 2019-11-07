@@ -388,7 +388,7 @@
       },
       getList() {
         this.SET_IS_LOADING(true);
-        console.log(this.params)
+        // console.log(this.params)
         api.getSystemList(this.params).then(res => {
           if (res.data.resultCode !== "000000") {
             this.$message.error(res.data.message);

@@ -519,7 +519,7 @@
     },
     methods: {
       finish(res) {
-        console.log(res);
+        // console.log(res);
 
         this.formData.className = res.header[3].children[0].subTitle;
         // // this.formData.studentId = res.header[3].children[0].checked
@@ -588,7 +588,7 @@
       },
 
       familyAddressGpsPoint(type) {
-        console.log(this.$refs.familyAddressGpsBaidumap);
+        // console.log(this.$refs.familyAddressGpsBaidumap);
         let familyAddressGpsCurrPoint = type.point;
         var geoc = new BMap.Geocoder();
         this.formData.familyAddressGps = familyAddressGpsCurrPoint.lat + "," + familyAddressGpsCurrPoint.lng + "," + this.formData.familyAddressGps;

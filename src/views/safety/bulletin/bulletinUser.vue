@@ -326,7 +326,7 @@
       handleSelectionChange(val) {
         this.multipleSelection = val;
 
-        console.log(val);
+        // console.log(val);
       },
       handleDelete(id) {
 

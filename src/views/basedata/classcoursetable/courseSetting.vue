@@ -171,7 +171,7 @@
           }
         }
         event.selected = true;
-        console.log(event);
+        // console.log(event);
         this.dialogTitle = `${event.weekNum}-${event.weekSequnceNum}`
       },
 

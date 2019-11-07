@@ -38,7 +38,7 @@
     },
     methods: {
       init () {
-        console.log(`studentGrantTotal is running...`)
+        // console.log(`studentGrantTotal is running...`)
       }
     }
   }

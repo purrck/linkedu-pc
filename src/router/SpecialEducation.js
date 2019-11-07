@@ -1,4 +1,4 @@
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 
 import interestcourseclassRouter from  "@/views/SpecialEducation/interestcourseclass/interestcourseclassRouter"  //兴趣班
 import interestcourseclassstudentcheckRouter from  "@/views/SpecialEducation/interestcourseclassstudentcheck/interestcourseclassstudentcheckRouter"  //兴趣考勤
@@ -22,13 +22,13 @@ export default [
       ...interestcourseclassstudentcheckRouter.children,
       ...interestcourseclassstudentRouter.children,
       ...interestcourseclassplanRouter.children,
+      ...habitwishRouter.children,
       ...habitassignmentrecordRouter.children,
       ...habitassignmentRouter.children,
       ...habitassignmenttypeRouter.children,
       ...habitflowerhistoryRouter.children,
       ...habitwishrecordRouter.children,
-      ...habitwishRouter.children,
-      ...habitwishtypeRouter.children
+      ...habitwishtypeRouter.children,
     ]
   }
 ]

@@ -423,11 +423,11 @@
             this.formData.interestCourseClassName   =item.interestCourseClassName
           }
         })
-      console.log(this.formData.interestCourseClassName);
+      // console.log(this.formData.interestCourseClassName);
       },
       getList() {
         api.fetchClassList(this.params).then(res => {
-          // console.log(res.data.data.records)
+          // // console.log(res.data.data.records)
           this.data = res.data.data.records;
           this.isLoaded = false;
         }, res => {
@@ -435,43 +435,43 @@
         });
       },
       studentChange(item){
-        console.log(item)
+        // console.log(item)
       },
       finish(res) {
-        // console.log(res);
-        // console.log(res.header[3].children);
+        // // console.log(res);
+        // // console.log(res.header[3].children);
         // this.formData.className = res.header[3].children[0].subTitle;
         // // // this.formData.studentId = res.header[3].children[0].checked
         this.showNames=''
         this.showName=[];
         let arr = [];
         for (let item in res.header[3].children) {
-          // console.log(res.header[3].children[item]);
+          // // console.log(res.header[3].children[item]);
           let ori = res.header[3].children[item].checked
           arr = arr.concat(ori)
         }
         this.formData.studentUserIds = arr;
 
-        // console.log(res.header[3].children)
+        // // console.log(res.header[3].children)
 
         for (let i=0;i<res.header[3].children.length;i++){
           for (let j=0;j<res.header[3].children[i].checked.length;j++){  //allchildren
             for (let k=0;k<res.header[3].children[i].children.length;k++){
               if (res.header[3].children[i].checked[j]===res.header[3].children[i].children[k].id){
-                console.log(res.header[3].children[i].children[k].name)
+                // console.log(res.header[3].children[i].children[k].name)
                 this.showName = this.showName.concat(res.header[3].children[i].children[k].name)
               }
             }
           }
         }
         this.showNames=this.showName.join()
-        // console.log(this.showNames.join());
+        // // console.log(this.showNames.join());
         //
 
         // this.showNames=this.showName.slice(',')
         // res.header[3].children[0].children.forEach(res => {
         //     this.showNmae.push(res.name);
-        //     console.log(this.showNmae);
+        //     // console.log(this.showNmae);
         // });
 
 

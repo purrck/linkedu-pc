@@ -37,7 +37,7 @@
                 this.$router.go(-1)
             },
             checkboxGroupChange(event){
-                console.log(event)
+                // console.log(event)
             },
             segmentConfirm(){
                 if(!this.checkedSegment.length){

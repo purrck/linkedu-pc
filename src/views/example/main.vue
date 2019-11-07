@@ -315,7 +315,7 @@
       api.getHeaderJson().then(res=>{
         this.header = res.data.data
         this.showSend = true
-        console.log(this.header)
+        // console.log(this.header)
       })
       commonApi.getCodeIntType("entityOriginType").then(res => {
         let viewList = res.data.data || [];
@@ -495,13 +495,13 @@
         return row.organizedDtStr;
       },
       finish(val) {
-        console.log('finish', val)
+        // console.log('finish', val)
       },
       next() {
-        console.log('next')
+        // console.log('next')
       },
       back() {
-        console.log('back')
+        // console.log('back')
       }
     }
   }

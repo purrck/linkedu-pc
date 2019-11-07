@@ -632,8 +632,8 @@
         resData[2].children.forEach(res => {
           claTem = claTem.concat(res.checked);
         });
-        console.log('claTem');
-        console.log(claTem);
+        // console.log('claTem');
+        // console.log(claTem);
         this.formData.classIds = claTem;
       },
       uploadData(res) {

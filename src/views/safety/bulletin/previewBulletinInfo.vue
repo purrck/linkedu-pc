@@ -25,7 +25,7 @@
       }
     },
     created() {
-      console.log(this.$route)
+      // console.log(this.$route)
 
       this.getSelectList()
       this.getBulletinInfoReceiptNum()

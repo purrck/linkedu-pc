@@ -261,7 +261,7 @@
     },
    // directives: {preview},
     created() {
-        // console.log(this.$route)
+        // // console.log(this.$route)
       this.formData.schoolId=this.$route.params.id
       this.formData.schoolOrgName = this.$route.query.schoolOrgName
         this.formData.parentPlaceId = this.$route.query.parentPlaceId;

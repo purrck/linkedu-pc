@@ -135,8 +135,6 @@
                         }
                         _a(res.data.data.children);
 
-                        console.log(_arr)
-
                         for(let i=0; i<this.segmentList.length; i++){
                             if(this.segmentList[i].id == this.selected.segmentId){
                                 this.watcher = this.msg.segment = this.segmentList[i];

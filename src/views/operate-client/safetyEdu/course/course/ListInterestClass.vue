@@ -258,7 +258,7 @@
     },
     activated() {
       //只刷新数据，不改变整体的缓存
-      console.log('重新活跃路由');
+      // console.log('重新活跃路由');
       let query = this.$route.query;
       for (let item in query) {
         this.params[item] = query[item]
@@ -279,7 +279,7 @@
           item.label = item.label.split(';')[0]
         })
       })
-      console.log(this.schoolInfo)
+      // console.log(this.schoolInfo)
       //let schoolId = this.$route.query.schoolOrgId;
       //this.params.schoolId = schoolId;
     },

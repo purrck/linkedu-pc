@@ -440,7 +440,7 @@
       getList() {
         this.listLoading = true
         bulletinList(this.listQuery).then(response => {
-          console.log(response)
+          // console.log(response)
           response.data.data.records.map((item) => {
 
             if(item.hasOwnProperty("bulletinStatusCodeStr")){
@@ -685,7 +685,7 @@
         bulletinInfoCommitcheck({
           bulletinId : this.$refs.bulletinTable.selection[0].bulletinId
         }).then(item => {
-          console.log(item)
+          // console.log(item)
           this.bulletinUserRuleFormVisible = false
           this.getList()
               this.$notify({
@@ -704,7 +704,7 @@
       },
       //点击标题跳转通知详情页
       handleDetail(row) {
-        console.log(row);
+        // console.log(row);
         this.$router.push({path: '/safety/viewBulletinInfoDetail', query: {id: row.bulletinId}})
       },
       // 点击审批，跳转到详情页审批

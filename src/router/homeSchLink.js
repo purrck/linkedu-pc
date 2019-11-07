@@ -1,4 +1,4 @@
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 import classmeetinginfoRouter from "../views/homeSchLink/classmeetinginfo/classmeetinginfoRouter";
 import classmeetingchecklistRouter from "../views/homeSchLink/classmeetingchecklist/classmeetingchecklistRouter";
 import studentfamilyvisitRouter from "../views/homeSchLink/studentfamilyvisit/studentfamilyvisitRouter";

@@ -28,10 +28,12 @@ import safety from './safety'
 import safetyEdu from './safetyEdu'
 import homeSchLink from "./homeSchLink";
 import SpecialEducation from "./SpecialEducation";
-import securityReminder from "./securityReminder";
 import dormitory from "./dormitory";
 import operate from "./operate-client";
-
+import newApplications from "./newApplications";
+import studySpace from "./studySpace";
+import safetyManagement from "./safetyManagement";
+import questionAnswer from "./questionAnswer";
 Vue.use(Router)
 
 export default new Router({
@@ -53,5 +55,5 @@ export default new Router({
   //   }
   // },
   // ...formatRoutes(store.state.user.menu),
-  routes: [].concat(index,basedata,safety,safetyEdu,homeSchLink,SpecialEducation,dormitory,operate,securityReminder)
+  routes: [].concat(index,basedata,safety,safetyEdu,homeSchLink,SpecialEducation,dormitory,operate,newApplications,studySpace,safetyManagement,questionAnswer)
 })

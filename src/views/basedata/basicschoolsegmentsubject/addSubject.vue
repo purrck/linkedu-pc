@@ -159,7 +159,7 @@
 
           })
 
-          console.log(this.gradeList)
+          // console.log(this.gradeList)
 
 
       })*/
@@ -178,7 +178,7 @@
               item.isd = true
           })
           this.getSementSubject = this.$store.getters.getSementSubject[0]
-      console.log(this.getSementSubject)
+      // console.log(this.getSementSubject)
       })
       */
     },
@@ -230,7 +230,7 @@
       },
       finishCreate() {
         let _a = [];
-        console.log(this.allData)
+        // console.log(this.allData)
         this.allData.map(item => {
           item.list.children.map((item) => {
             item.sementSubject.map(item => {
@@ -240,7 +240,7 @@
             })
           })
         })
-        console.log(_a)
+        // console.log(_a)
 
 
         /*this.segmentList.children.map((item) => {
@@ -274,7 +274,7 @@
       },
       switchChange(data) {
         //data.switch = data.switch ? false : true
-        console.log(data)
+        // console.log(data)
 
       }
     }

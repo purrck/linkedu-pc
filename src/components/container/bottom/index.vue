@@ -72,12 +72,12 @@
               <span >新浪微博</span>
             </div>
           </div>
-          <div style="padding-left: 95px">
+          <!-- <div style="padding-left: 95px">
             <img src="../../../assets/img/app_erweima.png" alt="" style="width: 100px;height: 100px;border: 1px dashed #909090;">
           </div>
           <div style="padding-left: 65px">
             <img src="../../../assets/img/app_erweima.png" alt="" style="width: 100px;height: 100px;border: 1px dashed #909090">
-          </div>
+          </div> -->
         </div>
 
       </div>

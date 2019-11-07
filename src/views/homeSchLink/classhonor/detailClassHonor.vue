@@ -423,7 +423,7 @@
     },
     methods: {
       finish(res) {
-        console.log(res);
+        // console.log(res);
 
         this.formData.classId = res.header[2].children[0].checked;
         this.formData.className = res.header[3].children[0].subTitle;

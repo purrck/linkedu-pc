@@ -320,8 +320,8 @@ export default {
     },
     getFileMessage (res) {
       let obj = res
-      //console.log('File基本信息');
-      //console.log(obj);
+      //// console.log('File基本信息');
+      //// console.log(obj);
       this.formData.filePath = res.urlurl
       this.formData.url = res.urlurl
       this.formData.sizes = res.size

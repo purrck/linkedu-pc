@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`entityevaluateTotal is running...`)
+      // console.log(`entityevaluateTotal is running...`)
     }
   }
 }

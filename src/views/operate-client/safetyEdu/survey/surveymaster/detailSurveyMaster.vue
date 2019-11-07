@@ -352,7 +352,7 @@
       submit(formName, clickType) {
         const set = this.$refs
         this.isLoaded = true
-        console.log(formName)
+        // console.log(formName)
         let obj = {
           vSurveyMasterAdTO: this.formData,
           vSurveyItemAdTOS: [],
@@ -372,7 +372,7 @@
           }
           obj.vSurveyItemAdTOS.push(o)
         })
-        console.log(obj)
+        // console.log(obj)
         // set[formName].validate(valid => {
         //   obj.vSurveyMasterAdTO.qnChoiceContent = []
         if (this.pageState === 'edit') {
@@ -421,7 +421,7 @@
         // this.submit(formName)
       },
       finish(val) {
-        console.log(val)
+        // console.log(val)
         let {header} = val
         let extendData = JSON.stringify(header)
         let province = []
@@ -465,7 +465,7 @@
               for (const child of headerElement.children) {
                 for (const child1 of child.children) {
                   for (const checkedElement of child.checked) {
-                    console.log(child, child1, checkedElement)
+                    // console.log(child, child1, checkedElement)
                     if (child1.id === checkedElement) {
                       area.push(child1)
                     }
@@ -475,7 +475,7 @@
               break
           }
         }
-        console.log('province', province, 'city', city, 'area', area)
+        // console.log('province', province, 'city', city, 'area', area)
         if (area.length) {
           this.SendObjectData.areas = area
         } else if (city.length) {

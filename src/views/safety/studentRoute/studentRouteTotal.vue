@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init () {
-      console.log(`studentRouteTotal is running...`)
+      // console.log(`studentRouteTotal is running...`)
     }
   }
 }

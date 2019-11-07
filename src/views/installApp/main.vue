@@ -43,7 +43,7 @@
             bottom
         },
         created(){
-            console.log("33")
+            // console.log("33")
         },
         computed : {
             link(){

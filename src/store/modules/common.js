@@ -73,7 +73,7 @@ const common = {
       return new Promise((resolve, reject) => {
         getConfig().then(response=>{
           const data = response.data.data
-          console.log(JSON.parse(data))
+          // console.log(JSON.parse(data))
           commit('SET_FILEURL',data.fileServerUrl)
           resolve()
         }).catch(error => {

@@ -18,8 +18,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 // var textApi = 'http://192.168.2.160:9999/' // 测试服
-// var textApi = 'http://183.56.219.252:9999/'
-var textApi = 'http://linkedu-server:9999/'
+var textApi = 'http://183.56.219.252:9999/';
 
 module.exports = {
 

@@ -290,7 +290,7 @@ export default {
   methods: {
     //图片上传
     uploadData (res) {
-      console.log(res)
+      // console.log(res)
       this.formData.imagePath = res
     },
     //编辑器

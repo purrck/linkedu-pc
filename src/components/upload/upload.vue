@@ -65,7 +65,7 @@
           fileMessage.urlurl= res;
           // this.$emit('data', res)
           // this.data = res
-          console.log(this.data)
+          // console.log(this.data)
           let resD
           if(this.data) {
             resD = this.data + ',' + res ;

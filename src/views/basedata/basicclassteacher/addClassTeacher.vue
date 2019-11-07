@@ -212,7 +212,7 @@
                     name : i
                 })
             }
-            console.log(this.schoolYearList)
+            // console.log(this.schoolYearList)
             this.getData();
         },
         mounted(){
@@ -221,24 +221,24 @@
         methods : {
             ...mapMutations(["SET_IS_LOADING"]),
             sdfsfsdf23(data){
-                console.log(data)
+                // console.log(data)
                 data.name = "445"
             },
             asdasdas(data){
-               console.log(data)
+               // console.log(data)
             },
             selectTeacher(obj){
-                console.log(obj)
+                // console.log(obj)
                 this.$callTeacherDialog({
                     callback : (msg) => {
-                        console.log(msg.userName)
+                        // console.log(msg.userName)
                         obj.teacherName = msg.userName
                         obj.teacherId = msg.teacherId
                         this.dList = this.dList.filter(item => {
                             return item.uuid != obj.uuid
                         })
                         this.dList.push(obj)
-                        console.log(this.dList)
+                        // console.log(this.dList)
                     }
                 })
             },
@@ -254,7 +254,7 @@
                                         return item.uuid != obj.uuid
                                     })
                                     this.dList.push(item)
-                                    console.log(this.dList)
+                                    // console.log(this.dList)
                                 }
                             })
 
@@ -268,7 +268,7 @@
             },
             subjectSelect(index){
                 this.subjectIndex = index;
-                console.log(this.dataList)
+                // console.log(this.dataList)
                 this.dataList.map(item => {
                     item.sementSubject.map(item => {
                         if(item.id == index){
@@ -282,7 +282,7 @@
             },
             getData(){
                 this.dataList = []
-                console.log(this.currentSegmentIndex)
+                // console.log(this.currentSegmentIndex)
                 this.SET_IS_LOADING(true);
                 this.$store.dispatch("schoolTree",{ schoolId : this.schoolInfo.schoolOrgId }).then(res => {
                     if(res.data.resultCode == "390000"){
@@ -319,7 +319,7 @@
                     this.segmentOptionsValue = this.segmentList.id
                     this.$store.dispatch("segmentSubjectService1",[this.segmentList.id]).then(res => {
                         this.subjectList = res.data.data.children[0].children
-                        console.log(this.classList1)
+                        // console.log(this.classList1)
                         this.classList1.children.map((item3,index3) => {
 
                                 this.$set(item3,"sementSubject", []);
@@ -347,7 +347,7 @@
                         })
                     /*this.$store.dispatch("segmentSubjectService1",[this.segmentList.id]).then(res => {
                         this.subjectList = res.data.data.children[0].children
-                        console.log(this.segmentList)
+                        // console.log(this.segmentList)
                         this.segmentList.children.map((item,index) => {
                             item.children.map((item3,index3) => {
                                 this.$set(item3,"sementSubject", []);
@@ -374,8 +374,8 @@
 
                         })*/
                         this.SET_IS_LOADING(false);
-                        console.log(this.segmentList)
-                        console.log(this.dataList)
+                        // console.log(this.segmentList)
+                        // console.log(this.dataList)
                     })
                 },res => {
                     this.SET_IS_LOADING(false);
@@ -441,7 +441,7 @@
 
             },
             classClick(index,item){
-                console.log()
+                // console.log()
                 this.currentClassIndex = index;
                 this.getData();
             },

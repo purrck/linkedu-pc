@@ -18,7 +18,7 @@
 import {validatenull} from './validate'
 import {baseUrl} from '@/config/env'
 import router from '@/router/_router'
-
+let CryptoJS = require('crypto-js')
 export const initMenu = (router, menu) => {
   if (menu.length === 0) {
     return
@@ -199,22 +199,22 @@ export const findParent = (menu, id) => {
 export const findParents = (menu, key) => {
 
   for (let i = 0; i < menu.length; i++) {
-    console.log('[' + i + ']');
+    // console.log('[' + i + ']');
     if (menu[i].children.length !== 0) {
       for (let j = 0; j < menu[i].children.length; j++) {
-        console.log('I=' + i + 'j=' + j);
-        console.log(menu[i].children[j].path);
+        // console.log('I=' + i + 'j=' + j);
+        // console.log(menu[i].children[j].path);
         // if (menu[i].children[j].id === key) {
         //   return menu[i]
         // } else {
         if (menu[i].children[j].children.length !== 0) {
-          console.log('儿子还有' + menu[i].children[j].children.length + '个')
+          // console.log('儿子还有' + menu[i].children[j].children.length + '个')
           return findParents(menu[i].children[j].children, key)
         }
         // }
       }
       // }else {
-      //   console.log('SBSBSB');
+      //   // console.log('SBSBSB');
     }
   }
 }
@@ -281,13 +281,13 @@ export const findArray = (dic, value) => {
 
 export const findArrayByValue = (dic, value, data) => {
   if (validatenull(dic)) {
-    console.log('查找字段不能为空')
+    // console.log('查找字段不能为空')
   }
   if (validatenull(data)) {
-    console.log('数据列不能为空')
+    // console.log('数据列不能为空')
   }
   if (validatenull(value)) {
-    console.log('字段值不能为空')
+    // console.log('字段值不能为空')
   }
 
   for (let item in data) {
@@ -308,21 +308,21 @@ export const findArrayByValue = (dic, value, data) => {
 
 export const findArrayToObj = (dic, value, data) => {
   if (validatenull(dic)) {
-    console.log('查找字段不能为空')
+    // console.log('查找字段不能为空')
     return -1
   }
   if (validatenull(data)) {
-    console.log('数据列不能为空')
+    // console.log('数据列不能为空')
     return -1
   }
   if (validatenull(value)) {
-    console.log('字段值不能为空')
+    // console.log('字段值不能为空')
     return -1
   }
 
   for (let item in data) {
-    console.log(data[item][dic]);
-    console.log(value);
+    // console.log(data[item][dic]);
+    // console.log(value);
     if (data[item][dic] === value) {
       return data[item]
     }
@@ -469,13 +469,13 @@ export function coverData(originData, label = 'codeDesc', value = 'codeId') {
 
 // 寻找子菜单的父类
 export function findMenuParent(to) {
-  // console.log('router.options.routes');
-  // console.log(router.options.routes);
+  // // console.log('router.options.routes');
+  // // console.log(router.options.routes);
   let tag1 = to.path.split('/')[2];
   let toName = to.name;
-  // console.log('寻找子菜单的父类');
-  // console.log(to);
-  // console.log(toName);
+  // // console.log('寻找子菜单的父类');
+  // // console.log(to);
+  // // console.log(toName);
 
   let arr = router.options.routes;
   let father = [];
@@ -485,7 +485,7 @@ export function findMenuParent(to) {
   for (let item of father) {
     if(item){
       if (item.name === toName) {
-        // console.log('找到了路由···········');
+        // // console.log('找到了路由···········');
         item['fullPath'] = to.fullPath
         return item;
       }

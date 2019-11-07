@@ -70,9 +70,9 @@ import { mapGetters, mapMutations } from 'vuex';
     },
     mounted() {
       this.formData1 = JSON.parse(decodeURIComponent(this.$route.query.formData));
-      console.log(this.formData1)
+      // console.log(this.formData1)
       this.SET_IS_LOADING(false)
-      console.log(this.isFinish)
+      // console.log(this.isFinish)
     },
     methods: {
       ...mapMutations(['SET_IS_LOADING']),
@@ -149,7 +149,7 @@ import { mapGetters, mapMutations } from 'vuex';
         }
       },
       finish(data){
-        console.log(data)
+        // console.log(data)
         this.$message.success("选择成功");
         //this.formData1["scope"] = JSON.stringify(data);
 

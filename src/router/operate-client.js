@@ -1,4 +1,4 @@
-import Layout from '@/components/container/index_'
+import Layout from '@/components/container/index'
 const _import = require('./_import')
 //运营端
 import orgschooltimelineRouter from '@/views/operate-client/basedata/orgschooltimeline/orgschooltimelineRouter'

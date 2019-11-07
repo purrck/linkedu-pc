@@ -214,7 +214,6 @@ export default {
           })
       this.handleClick(this.targetData.list[0],0)
       /*commonApi.getUserType().then(res => {
-        console.log(res)
         this.sectionData = res.data.data
       })*/
       this.initData()
@@ -228,9 +227,7 @@ export default {
       this.treeData[this.index].isCurrent = true
     },
     handleClick (data, index) {
-      console.log(data)
       getTypeBy(data.url,{}).then(res => {
-        console.log(this.index)
         if(res.data.resultCode == "100000"){
           this.pageState = "error"
           this.pageInfo = res.data.message
@@ -270,8 +267,6 @@ export default {
       this.isIndeterminate = false
     },
     checkboxChange(event,data){
-      console.log(data)
-
       if(data.type == "role"){
         return ;
       }
@@ -295,7 +290,6 @@ export default {
             selectList : []
           })
         }
-      console.log(this.menuData[this.index])
     },
     setCall(){
       if(this.index == 0 && this.curIndex == 0){
@@ -312,7 +306,6 @@ export default {
       }
     },
     convertData () {
-      console.log(this.menuData)
       let _a = {
         role : [],
         segment : [],
@@ -340,8 +333,6 @@ export default {
         })
 
       });
-      console.log(_a)
-      console.log(this.callbackData)
       this.$emit('callback', _a)
     },
     next () {
@@ -368,7 +359,6 @@ export default {
       //this.selectionList = [];
       this.targetData = this.menuData[this.index]
       this.handleClick(this.menuData[this.index].list[0],0)
-      console.log(this.menuData)
       //this.menuData = this.checked
     },
     back () {
@@ -388,7 +378,6 @@ export default {
       this.menuData[this.index].list = this.menuData[this.index].selectionList
       this.targetData = this.menuData[this.index]
       this.handleClick(this.targetData.list[0],0)
-      console.log(this.index)
     },
     finish () {
       this.convertData()

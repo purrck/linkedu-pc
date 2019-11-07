@@ -75,7 +75,6 @@ export default {
   },
   methods: {
     init () {
-      console.log(`resultPreview is running...`)
     }
   }
 }

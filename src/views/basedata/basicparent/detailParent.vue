@@ -546,7 +546,7 @@
       selectStudent(data) {
         this.$callStudentDialog({
           callback: (msg) => {
-            console.log(msg)
+            // console.log(msg)
             data.studentUserName = msg.userName
             data.studentId = msg.studentId
             data.studentUserId = msg.userId

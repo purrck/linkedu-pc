@@ -214,7 +214,7 @@ export default {
       return ++i
     },
     handle (type, item1, index) {
-      console.log(type)
+      // console.log(type)
       let item = JSON.parse(JSON.stringify(item1))
       switch (type) {
         case 'plus':
@@ -240,7 +240,7 @@ export default {
         }
 
       }
-      console.log(this.currentData.options)
+      // console.log(this.currentData.options)
       this.$forceUpdate()
     },
     enter () {
@@ -262,7 +262,7 @@ export default {
       this.isShow = true
     },
     itemEdit (item, index) {
-      console.log(item)
+      // console.log(item)
       item.options = item.qnChoiceContent.map(item => {
         return {value: item}
       })

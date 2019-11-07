@@ -123,7 +123,7 @@
         // alert(1)
       },
       getItem(item){
-        console.log(item);
+        // console.log(item);
       }
     }
   }
