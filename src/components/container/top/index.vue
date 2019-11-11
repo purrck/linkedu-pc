@@ -88,10 +88,10 @@
         this.$store.commit("SET_ACTIVETWO", '');
         if(item.path==='/files/index'){
           let userId =  getStore({name:'userInfo'}).id;
-          let b = 'http://192.168.2.60:3088';
+          let b = 'http://183.56.219.252:5189';
 
-          if(window.location.host == "47.106.35.119"){
-            b = "http://47.106.35.119:5388"
+          if(window.location.host == "183.56.220.189"){
+            b = "http://183.56.220.189:5189"
           }
           let opath = b+'/#/WebTologin?token='+ getToken() + '&userId=' + userId;
           window.open(opath,'_blank');

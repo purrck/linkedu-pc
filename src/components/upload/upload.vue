@@ -7,7 +7,7 @@
         <input type="file" ref="uploadFiles" @change="change" style="position: absolute; width: 1px; height: 1px; opacity: 0; z-index: -1;"/></div>
       <!--<div class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>-->
       <ul class="el-upload-list el-upload-list--text" v-if="value">
-        <li tabindex="0" class="el-upload-list__item is-success" v-for="(item,index) in value.split(',')">
+        <li tabindex="0" class="el-upload-list__item is-success" v-for="(item,index) in value.split(',')" :key="item">
           <a class="el-upload-list__item-name"><i class="el-icon-document"></i>{{item}}</a>
           <label class="el-upload-list__item-status-label">
             <i class="el-icon-upload-success el-icon-circle-check"></i>

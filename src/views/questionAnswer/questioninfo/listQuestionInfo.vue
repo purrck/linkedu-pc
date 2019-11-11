@@ -3,8 +3,11 @@
                                                               
 <template>
   <div class="QuestionInfo">
+    <div class="tree-one">
+      <treeOne :treeData="dataType.records"></treeOne>
+    </div>
     <el-container v-loading="isLoaded" element-loading-custom-class="home-loading"
-                  style="min-height: 600px"
+                  style="min-height: 600px;width:90%;float:right;"
                   element-loading-spinner="el-icon-loading" element-loading-background="rgba(0, 0, 0, 0.1)">
       <el-header style="height: auto">
 
@@ -92,7 +95,19 @@
 <!-- 学科 colName:subject_name sqlType:VARCHAR notnull:false -->
                   <el-table-column prop="studentName" align="center" label="学生" sortable="custom">
                     <template slot-scope="scope">
-                      <div v-if="scope.row.studentName" class="one-line">{{scope.row.studentName}}</div>
+                      <div v-if="scope.row.studentName" class="user-msg">
+                        <div v-if="scope.row.studentUserPreviewVO.headPicture" class="user-img">
+                        <el-popover placement="top-start" title trigger="hover">
+                          <img :src="scope.row.studentUserPreviewVO.headPicture" alt="头像" style="width:300px;height:300px">
+                          <img slot="reference" :src="scope.row.studentUserPreviewVO.headPicture" style="border-radius:50%;width:60px;height:60px" alt="" class="scope-img">
+                        </el-popover>
+                        </div>
+                      <div v-if="scope.row.studentUserPreviewVO.firstName" class="user-name">{{scope.row.studentUserPreviewVO.firstName}}</div>
+                      <div v-if="scope.row.studentUserPreviewVO.gender" class="user-sex">
+                        <img width="25" height="25" v-if="scope.row.studentUserPreviewVO.gender == 'F'" src="../../../assets/img/headerImg-nan.png">
+                        <img width="25" height="25" v-else src="../../../assets/img/headerImg-nv.png">
+                        </div>
+                      </div>
                       <div v-else>无</div>
                     </template>
                   </el-table-column>
@@ -196,6 +211,9 @@
   import api from "./questioninfoUrl";
   import commonApi from "@/api/common/common";
   import preview from '@/util/preview';
+  import treeOne from './tree-one';
+  import apitype from '../questiontype/questiontypeUrl';
+  import talk from '../questioninfo/talk'
   export default {
     directives: {preview},
     data() {
@@ -216,6 +234,7 @@
           tags :null,
         },
         data : "",
+        dataType: "",
         multipleSelection : [],
         params :{
           page : 1,
@@ -224,6 +243,9 @@
           tags :null,
         }
       }
+    },
+    components: {
+      treeOne
     },
     computed: {
       indexMethod() {
@@ -235,12 +257,17 @@
       for (let item in query) {
         this.params[item] = query[item]
       }
+      // 接收
+      talk.$on('data',res=>{
+        this.data = res;
+      });
     },
     mounted() {
       this.getCurrentPage(this.$route.path, this.params)
       this.getList();
+      this.getTypeList();
 
-                                                                                                                                                                                  commonApi.getCodeIntType("questionStatus").then(res => {
+        commonApi.getCodeIntType("questionStatus").then(res => {
             let viewList = res.data.data || [];
             for (let questionStatusItem of viewList) {
               this.questionStatusCodeOptions.push({
@@ -299,6 +326,15 @@
         api.fetchList(this.params).then(res => {
 
           this.data = res.data.data;
+          this.isLoaded = false;
+        }, res => {
+          this.$message.error(res.message);
+        });
+      },
+      // get questionType 数据
+      getTypeList(){
+        apitype.fetchList(this.params).then(res => {
+          this.dataType = res.data.data;
           this.isLoaded = false;
         }, res => {
           this.$message.error(res.message);
@@ -390,10 +426,50 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 16px;
-
   img {
     vertical-align: -4px;
   }
 
+  }
+  .QuestionInfo{
+  position: relative;
+  }
+  .user-msg{
+    width: 150px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .user-img{
+    position: absolute;
+    left: 5px;
+    top: 20px;
+  }
+  .user-name{
+    width: 30%;
+    height: 30%;
+    text-align: left;
+    position: absolute;
+    left: 80px;
+    top: 48%;
+  }
+  .user-sex{
+    width: 30%;
+    height: 30%;
+    text-align: left;
+    position: absolute;
+    color: gray;
+    left: 40px;
+    top: 55%;
+    z-index: 999;
+  }
+  .tree-one{
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    width: 10%;
+    min-height: 100%;
+    overflow: auto;
+    border-right: 1px solid rgb(147, 212, 138); 
   }
 </style>

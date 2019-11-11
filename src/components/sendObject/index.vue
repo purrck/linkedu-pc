@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="main__content">
-        <div v-for="(item, index) of menuData" v-if="item.isActive&&!item.single" :key="index">
+        <div v-for="(item, index) of menuData" v-show="item.isActive&&!item.single" :key="index">
           <el-checkbox :indeterminate="item.isCheckAll" v-model="item.checkAll" @change="handleCheckAllChange($event,item,index)">全选</el-checkbox>
           <div>
             <el-checkbox-group v-model="item.checked">
@@ -25,7 +25,7 @@
             </el-checkbox-group>
           </div>
         </div>
-        <div v-for="(item, index) of menuData" v-if="item.isActive&&item.single" :key="index">
+        <div v-for="(item, index) of menuData" v-show="item.isActive&&item.single" :key="index">
           <div>
             <h1>{{item.single}}</h1>
             <el-radio-group v-model="item.checked">

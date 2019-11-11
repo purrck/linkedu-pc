@@ -1,4 +1,4 @@
-import HelloWorld from '@/components/HelloWorld'
+import index from '@/views/index'
 import login from '@/views/login/login'
 import Layout from '@/components/container/index'
 import listStatisticsJobs from '@/views/admin/statisticsjobs/listStatisticsJobs'
@@ -64,7 +64,7 @@ export default [
       path: '/page/wel',
       name: 'index',
       label: '首页',
-      component: HelloWorld,
+      component: index,
     },]
   },
   {

@@ -579,6 +579,54 @@ export default [
           },
         ]
       },
+      {
+        label: '疾控中心',
+        path: '/newApplications/listSchoolEpidemicSituation',
+        children: [
+          {
+            label: '疫情记录',
+            path: '/newApplications/listSchoolEpidemicSituation',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情处理',
+            path: '/newApplications/listSchoolEpidemicSituationProcess',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情学生',
+            path: '/newApplications/listSchoolEpidemicSituationStudent',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '疫情处理小组教师',
+            path: '/newApplications/listSchoolEpidemicSituationTeacher',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生疾病知识库',
+            path: '/newApplications/listSchoolIllnessLib',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生异常情况',
+            path: '/newApplications/listSchoolStudentBodyabnormal',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生疾病信息',
+            path: '/newApplications/listSchoolStudentIllness',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
     ],
   },
 
@@ -646,6 +694,67 @@ export default [
           },
         ]
       },
+      {
+        label: '失物招领',
+        path: '/newApplications/listLostThing',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '校长信箱',
+        path: '/newApplications/listPrincipalMailbox',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '校内消息',
+        path: '/newApplications/listSchoolMessage',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '校内任务',
+        path: '/newApplications/listSchoolTask',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '问题答疑',
+        path: 'questionAnswer',
+        // component: 'Layout',
+        children: [
+          {
+            label: '问题类型',
+            path: '/questionAnswer/listQuestionType',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '问题',
+            path: '/questionAnswer/listQuestionInfo',
+            component: 'Layout',
+            children: []
+          },
+          {
+            label: '学生评论库',
+            path: '/questionAnswer/listSchoolStudentCommentLib',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
+    ]
+  },
+  {
+    label: '特长教育',
+    path: '/SpecialEducation/listInterestCourseClass',
+    children: [
+      {
+        label: '兴趣班',
+        path: '/SpecialEducation/listInterestCourseClass',
+        component: 'Layout',
+        children: []
+      },
     ]
   },
   // {
@@ -701,133 +810,18 @@ export default [
   //   ]
   // },
   {
-    label: '微应用',
-    path: '/newApplications',
-    component: 'Layout',
+    label: '网络学习空间',
+    path: '/newApplications/listPersonalStudySpace',
     children: [
       {
-        label: '疾控中心',
-        path: '/newApplications/listSchoolEpidemicSituation',
-        children: [
-          {
-            label: '疫情记录',
-            path: '/newApplications/listSchoolEpidemicSituation',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '疫情处理',
-            path: '/newApplications/listSchoolEpidemicSituationProcess',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '疫情学生',
-            path: '/newApplications/listSchoolEpidemicSituationStudent',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '疫情处理小组教师',
-            path: '/newApplications/listSchoolEpidemicSituationTeacher',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '学生疾病知识库',
-            path: '/newApplications/listSchoolIllnessLib',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '学生异常情况',
-            path: '/newApplications/listSchoolStudentBodyabnormal',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '学生疾病信息',
-            path: '/newApplications/listSchoolStudentIllness',
-            component: 'Layout',
-            children: []
-          }
-        ]
-      },
-      {
-        label: '特长教育',
-        path: '/SpecialEducation/listInterestCourseClass',
-        children: [
-          {
-            label: '兴趣班',
-            path: '/SpecialEducation/listInterestCourseClass',
-            component: 'Layout',
-            children: []
-          },
-        ]
-      },
-      {
-        label: '学校',
-        path: '/newApplications/listSchoolDocIndex',
-        children: [
-          {
-            label: '学校文件',
-            path: '/newApplications/listSchoolDocIndex',
-            component: 'Layout',
-            children: []
-          }
-        ]
-      },
-      {
-        label: '网络学习空间',
+        label: '个人学习空间',
         path: '/newApplications/listPersonalStudySpace',
-        children: [
-          {
-            label: '个人学习空间',
-            path: '/newApplications/listPersonalStudySpace',
-            component: 'Layout',
-            children: []
-          },
-          {
-            label: '个人文章',
-            path: '/newApplications/listPersonalArticle',
-            component: 'Layout',
-            children: []
-          }
-        ]
-      },
-      {
-        label: '失物招领',
-        path: '/newApplications/listLostThing',
         component: 'Layout',
         children: []
       },
       {
-        label: '校长信箱',
-        path: '/newApplications/listPrincipalMailbox',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '校内消息',
-        path: '/newApplications/listSchoolMessage',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '校内任务',
-        path: '/newApplications/listSchoolTask',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '学生小组设置',
-        path: '/newApplications/listStudentGroupSet',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '报修信息',
-        path: '/newApplications/listRepairInfo',
+        label: '个人文章',
+        path: '/newApplications/listPersonalArticle',
         component: 'Layout',
         children: []
       }
@@ -905,6 +899,30 @@ export default [
         ]
       },
       {
+        label: '学校',
+        path: '/newApplications/listSchoolDocIndex',
+        children: [
+          {
+            label: '学校文件',
+            path: '/newApplications/listSchoolDocIndex',
+            component: 'Layout',
+            children: []
+          }
+        ]
+      },
+      {
+        label: '学生小组设置',
+        path: '/newApplications/listStudentGroupSet',
+        component: 'Layout',
+        children: []
+      },
+      {
+        label: '报修信息',
+        path: '/newApplications/listRepairInfo',
+        component: 'Layout',
+        children: []
+      },
+      {
         label: '值周值日',
         path: '/safetyManagement/listSchoolBeonduty',
         component: 'Layout',
@@ -943,35 +961,9 @@ export default [
     ]
   },
   {
-    label: '问题答疑',
-    path: 'questionAnswer',
-    component: 'Layout',
-    children: [
-      {
-        label: '问题类型',
-        path: '/questionAnswer/listQuestionType',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '问题',
-        path: '/questionAnswer/listQuestionInfo',
-        component: 'Layout',
-        children: []
-      },
-      {
-        label: '学生评论库',
-        path: '/questionAnswer/listSchoolStudentCommentLib',
-        component: 'Layout',
-        children: []
-      }
-    ]
-  },
-  {
-    label: '文件管理',
+    label: '教育云盘',
     path: '/files/index',
     component: 'Layout',
     children: []
   },
-
 ]
